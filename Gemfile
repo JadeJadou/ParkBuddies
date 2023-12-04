@@ -9,6 +9,7 @@ gem 'acts_as_favoritor'
 gem "autoprefixer-rails"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2"
+gem "cloudinary"
 gem "devise"
 gem "font-awesome-sass", "~> 6.1"
 gem "geocoder"
