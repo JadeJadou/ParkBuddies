@@ -1,0 +1,23 @@
+<div class="container mt-3">
+<h1>Choisis le parc le plus près de chez toi</h1>
+<h2>& retrouve la communauté de parents la plus proche</h2>
+<div class="card-wrap cards">
+
+  <% @parks.each do | park | %>
+    <%= link_to park_path(park), class:"text-decoration-none", style:"color: inherit" do %>
+      <div class="card-park">
+        <%= cl_image_tag park.photo.key %>
+        <div class="card-park-infos">
+          <h5 class="card-title"><%= park.name %></h5>
+          <p> <%= truncate(park.description, length:200) %></p>
+          </div>
+      </div>
+      <% end %>
+    <% end %>
+</div>
+
+<div style="width: 50%; height: 400px; p-20" class="formatmap"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  </div>
