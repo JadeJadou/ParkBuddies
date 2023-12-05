@@ -1,6 +1,7 @@
 .flex {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .flex-end {
@@ -11,4 +12,9 @@
 .center{
   text-align: center;
   margin: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: flex-end; // or `flex-start`
 }

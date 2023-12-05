@@ -1,26 +1,47 @@
 <div class="flex">
     <%if @park.sandbox === true  %>
-      <%= @park.sandbox %>
+  <div class="label">
+      <i class="fa-solid fa-campground" style="color: #7f7f7f;"></i>
+      sandbox
+  </div>
     <% end %>
     <%if @park.slide === true  %>
-      <%= @park.slide %>
+    <div class="label">
+    <i class="fa-solid fa-shapes" style="color: #7f7f7f;"></i>
+      slide
+    </div>
     <% end %>
      <%if @park.sling === true  %>
-      <%= @park.sling %>
+      <div class="label">
+      <i class="fa-solid fa-puzzle-piece" style="color: #7f7f7f;"></i>
+      sling
+    </div>
     <% end %>
     <%if @park.water === true  %>
-      <%= @park.water %>
+      <div class="label">
+      water
+    </div>
     <% end %>
     <%if @park.climber === true  %>
-      <%= @park.climber %>
+      <div class="label">
+      <i class="fa-solid fa-cubes-stacked" style="color: #7f7f7f;"></i>
+     climber
+    </div>
     <% end %>
     <%if @park.coffee === true  %>
-      <%= @park.coffee %>
+      <div class="label">
+      <i class="fa-solid fa-cookie" style="color: #7f7f7f;"></i>
+      coffee
+    </div>
     <% end %>
     <%if @park.zoo === true  %>
-      <%= @park.zoo %>
+      <div class="label">
+      zoo
+    </div>
     <% end %>
     <%if @park.toys_rent === true  %>
-      <%= @park.toys_rent %>
+      <div class="label">
+      toys rent
+    </div>
     <% end %>
   </div>
