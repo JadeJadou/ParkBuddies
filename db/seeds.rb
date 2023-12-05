@@ -25,31 +25,94 @@ user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Ace8", 
 user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Ace9", address:"Lausanne", kids_average_age:"3", kids_count:"1", email: "user9@email.com", password: "azerty", avatar:"")
 user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Ace10", address:"Lausanne", kids_average_age:"3", kids_count:"3", email: "user10@email.com", password: "azerty", avatar:"")
 
-
 puts "Creating park"
-park1 = Park.new(name: "Parc de Milan",
+park1 = Park.new(
+  name: "Parc de Milan",
   address: "Pl. de Milan, 1007 Lausanne, Suisse",
   description: "Il est sans doute difficile de trouver un enfant lausannois qui ne connaisse pas la place de Milan et son exceptionnelle place de jeux. Mais impossible de limiter ce parc à son seul aspect ludique. La place de Milan et le crêt de Montriond sont aussi des témoins de l’histoire lausannoise.",
   category: "Grand",
   sandbox: false,
   slide: true,
   sling: false,
-  water: false,
+  water: true,
   climber: false,
-  coffee: false,
+  coffee: true,
   zoo: true,
-  toys_rent: false,
-  suitable_from_age: 2)
+  toys_rent: true,
+  suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701781953/Parc_de_Milan_gcngdu.jpg")
 park1.photo.attach(io: file, filename: "Parc de Milan.jpg", content_type: "image/jpg")
+
+park2 = Park.new(
+  name: "Parc de Mon Repos",
+  address: "Av. Mon-Repos, 1005 Lausanne, Suisse",
+  description: "De tous les beaux parcs qui constituent le patrimoine végétal historique lausannois, Mon-Repos est sans doute le plus extraordinaire: exceptionnel par la diversité de ses éléments architecturaux (tour néogothique, cascade, temple néoclassique, orangerie, volières, etc.), il l'est aussi par la richesse de la documentation en notre possession et par l'harmonie de l'ensemble.",
+  category: "Petit",
+  sandbox: false,
+  slide: true,
+  sling: false,
+  water: true,
+  climber: true,
+  coffee: false,
+  zoo: true,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701786505/2_Parc_de_Mon_Repos_ef29hn.jpg")
+park2.photo.attach(io: file, filename: "Parc de Mon Repos.jpg", content_type: "image/jpg")
+
+park3 = Park.new(
+  name: "Parc de Rhodanie",
+  address: "1007 Lausanne, Suisse",
+  description: "À l’écart de la circulation, protégée de l’avenue de Rhodanie par une lisière d’arbre, cette petite place se trouve dans le Parc de la Campagne Rhoner. Elle dispose de jeux en bois pour les petits, sur un revêtement synthétique.",
+  category: "Moyen",
+  sandbox: false,
+  slide: true,
+  sling: true,
+  water: false,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701787369/3_Parc_de_Rhodanie_v9h6f7.jpg")
+park2.photo.attach(io: file, filename: "Parc de Rhodanie.jpg", content_type: "image/jpg")
+
+park4 = Park.new(
+  name: "Parc de Sauvabelin",
+  address: "Chemin de la Chocolatière, 1018 Lausanne, Suisse",
+  description: "C'est encore la ville, c'est déjà la campagne: de la Tour et du Signal de Sauvabelin, un superbe panorama s'offre à la vue du promeneur. Au-dessus, des forêts de chênes entourent le lac de Sauvabelin, au charme duquel s'ajoute l'attrait de son parc animalier ProSpecieRara. Chèvres, cochons laineux, canards, sangliers et plusieurs autres volatiles sont à observer, en liberté ou dans des enclos.
+  Le Parc de Sauvabelin abrite également «La Pinte du Lac» qui propose une cuisine locale et régionale, ainsi que des mets au fromage.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: false,
+  climber: true,
+  coffee: true,
+  zoo: true,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701788229/4_Parc_de_Sauvabelin_i2eerv.jpg")
+park2.photo.attach(io: file, filename: "Parc de Sauvabelin.jpg", content_type: "image/jpg")
+
 puts "Sauvegarde les parcs"
 park1.save
+park2.save
+park3.save
+park4.save
 
 puts "Creating chatroom"
 
 chatroom1 = Chatroom.new(name: "Parc de Milan", park_id: park1.id)
-# chatroom2 = Chatroom.create!(name: "Nemo", park_id: 2)
-# chatroom3 = Chatroom.create!(name: "Dory", park_id: 3)
+chatroom2 = Chatroom.new(name: "Parc de Mon Repos", park_id: park2.id)
+chatroom3 = Chatroom.new(name: "Parc de Rhodanie", park_id: park3.id)
+chatroom4 = Chatroom.new(name: "Parc de Sauvabelin", park_id: park4.id)
 
 chatroom1.save
+chatroom2.save
+chatroom3.save
+chatroom4.save
