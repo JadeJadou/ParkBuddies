@@ -27,3 +27,20 @@
   background: linear-gradient(#D0F288, #BED754);
   color: white;
 }
+
+
+.btn-large {
+  color: black;
+  padding: 8px 24px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: $green;
+  text-decoration: none;
+  transition: 0.3s ease;
+  &:hover {
+    background: linear-gradient($green, $greenbis);
+    color: white;
+  }
+}
