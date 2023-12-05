@@ -78,7 +78,7 @@ park3 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701787369/3_Parc_de_Rhodanie_v9h6f7.jpg")
-park2.photo.attach(io: file, filename: "Parc de Rhodanie.jpg", content_type: "image/jpg")
+park3.photo.attach(io: file, filename: "Parc de Rhodanie.jpg", content_type: "image/jpg")
 
 park4 = Park.new(
   name: "Parc de Sauvabelin",
@@ -97,7 +97,7 @@ park4 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701788229/4_Parc_de_Sauvabelin_i2eerv.jpg")
-park2.photo.attach(io: file, filename: "Parc de Sauvabelin.jpg", content_type: "image/jpg")
+park4.photo.attach(io: file, filename: "Parc de Sauvabelin.jpg", content_type: "image/jpg")
 
 puts "Sauvegarde les parcs"
 park1.save
