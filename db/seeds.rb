@@ -99,11 +99,32 @@ park4 = Park.new(
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701788229/4_Parc_de_Sauvabelin_i2eerv.jpg")
 park4.photo.attach(io: file, filename: "Parc de Sauvabelin.jpg", content_type: "image/jpg")
 
+park5 = Park.new(
+  name: "Parc de Chandieu",
+  address: "1006 Lausanne, Suisse",
+  description: "Intégrée dans le préau du Collège de Chandieu et adossée à un talus boisé, cette place, reconnaissable à son sol en relief zébré de lignes blanches, offre de belles possibilités de course et de parcours en trottinette; elle comprend un trampoline intégré au sol, des balançoires, dont une balançoire-panier, des maisonnettes en bois installées dans une zone verte, une structure d’équilibre en bois et métal et un grand bac à sable avec jeux d’eau.
+
+  Des arbres et des arbustes d’essences indigènes, plantés par les élèves, agrémentent le lieu. Bancs et tables de pique-nique font de cette place un agréable lieu de rencontre.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701790605/5_Parc_de_Chandieu_n2d718.jpg")
+park5.photo.attach(io: file, filename: "Parc de Chandieu.jpg", content_type: "image/jpg")
+
 puts "Sauvegarde les parcs"
 park1.save
 park2.save
 park3.save
 park4.save
+park5.save
 
 puts "Creating chatroom"
 
@@ -111,8 +132,10 @@ chatroom1 = Chatroom.new(name: "Parc de Milan", park_id: park1.id)
 chatroom2 = Chatroom.new(name: "Parc de Mon Repos", park_id: park2.id)
 chatroom3 = Chatroom.new(name: "Parc de Rhodanie", park_id: park3.id)
 chatroom4 = Chatroom.new(name: "Parc de Sauvabelin", park_id: park4.id)
+chatroom5 = Chatroom.new(name: "Parc de Chandieu", park_id: park5.id)
 
 chatroom1.save
 chatroom2.save
 chatroom3.save
 chatroom4.save
+chatroom5.save
