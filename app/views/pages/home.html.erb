@@ -1,13 +1,23 @@
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701776734/personnes-profitant-des-activites-de-loisirs-au-sheep-meadow-dans-central-park-new-york-city-etats-unis-2022-2j5tg7j_nghwws.jpg);">
+    <div class="container">
+      <h1>ParkBuddies</h1>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701776734/personnes-profitant-des-activites-de-loisirs-au-sheep-meadow-dans-central-park-new-york-city-etats-unis-2022-2j5tg7j_nghwws.jpg);">
-
-  <div class="container">
-    <h1>ParkBuddies</h1>
-    <p>L'appli qui transforme les parcs en terrains d'amitié</p>
-    <p><strong>Rencontrez, Connectez, Partagez</strong></p>
+      <p>L'appli qui transforme les parcs en terrains d'amitié</p>
+      <p><strong>Rencontrez, Connectez, Partagez</strong></p>
+    </div>
   </div>
+
+<div class="col-md-4 text-center">
+  <% if user_signed_in? %>
+      <%= link_to "Voir les parcs", parks_path, class: "btn-noir"%>
+      <% else %>
+        <%= link_to "S'inscrire", new_user_session_path, class:"btn-noir" %>
+        <%= link_to "Se connecter", user_session_path, class:"btn-blanc" %>
+      <% end %>
 </div>
 
 
-<a class="btn btn-noir" href="#">S'inscrire</a>
-<a class="btn btn-blanc" href="#">Se connecter</a>
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
