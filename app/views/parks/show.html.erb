@@ -1,8 +1,8 @@
 <h1>ParkBuddies</h1>
-<div class="container cards">
-  <div style="width: 500px; height: 200px; p-20" class="formatmap"
+<div class="container map-flex">
+  <div style="width: 300px; height: 250px; p-20; flex-shrink: 0;" class="formatmap"
     data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-markers-value="<%= @marker.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
   <div>
     <%if @park.photo.attached?  %>
