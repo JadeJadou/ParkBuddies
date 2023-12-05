@@ -1,0 +1,23 @@
+<h1>ParkBuddies</h1>
+<div class="container mt-3 d-flex justify-content-center">
+  <%if @park.photo.attached?  %>
+    <%= cl_image_tag @park.photo.key, class: "photo"%>
+  <% end %>
+</div>
+
+ <div class="map-show"
+      data-controller="map"
+      data-map-markers-value="<%= @marker.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+
+<div class="container">
+  <div class="flex">
+    <h2><%= @park.name %></h2>
+    <div class="flex-end">
+      <i class="fa-regular fa-heart fa-lg" style="color: #ff1a1a;"></i>
+    </div>
+  </div>
+    <p><%= @park.description %></p>
+    <%= @park.category %>
+</div>
