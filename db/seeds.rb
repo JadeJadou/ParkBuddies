@@ -295,7 +295,7 @@ park14.photo.attach(io: file, filename: "Parc Donner.jpg", content_type: "image/
 
   #Nyon
 
-park14 = Park.new(
+park15 = Park.new(
   name: "Parc de Mangettes",
   address: "Chemin de Mangette, 1260 Nyon, Suisse",
   description: "Véritable poumon vert, ce parc offre une vaste étendue pour se détendre, pique-niquer et s'amuser au milieu d'arbres remarquables fonctionnant comme un îlot de fraîcheur. Les vestiges de l'aqueduc romain sont visibles sur quelques mètres. Une plate-bande de plantes vivaces agrémente le parc de ses fleurs colorées, parmi lesquelles des anémones du Japon qui fleurissent jusqu'aux premières gelées.",
@@ -311,9 +311,9 @@ park14 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809755/NYO_Mangettes_buep3k.jpg")
-park14.photo.attach(io: file, filename: "Parc de Mangettes.jpg", content_type: "image/jpg")
+park15.photo.attach(io: file, filename: "Parc de Mangettes.jpg", content_type: "image/jpg")
 
-park15 = Park.new(
+park16 = Park.new(
   name: "Parc du Boiron",
   address: "Route de Genève 9, 1260 Nyon, Suisse",
   description: "Partez à la découverte d'un des lieux les plus riches en biodiversité de Nyon. Détendez-vous au bord de la rivière du Boiron et flânez dans un cadre naturel et calme. En saison, cet espace devient un haut lieu des grillades du week-end.",
@@ -329,9 +329,9 @@ park15 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701781953/Parc_de_Milan_gcngdu.jpg")
-park15.photo.attach(io: file, filename: "Parc du Boiron.jpg", content_type: "image/jpg")
+park16.photo.attach(io: file, filename: "Parc du Boiron.jpg", content_type: "image/jpg")
 
-park16 = Park.new(
+park17 = Park.new(
   name: "Parc de Bois-Fleuri",
   address: "Pl. de Savoie 2, 1260 Nyon, Suisse",
   description: "Dans ce cadre idyllique, profitez de l'étendue verte offrant une vue imprenable sur le lac tout en laissant les enfants partir à l'aventure en jouant aux navigateurs. Vous apercevrez des arbres ancestraux ainsi qu'un sous-bois composé de rhododendrons et de taxus.",
@@ -347,9 +347,9 @@ park16 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809755/NYO_BoisFleuri_tktmhl.jpg")
-park16.photo.attach(io: file, filename: "Parc de Bois-Fleuri.jpg", content_type: "image/jpg")
+park17.photo.attach(io: file, filename: "Parc de Bois-Fleuri.jpg", content_type: "image/jpg")
 
-park17 = Park.new(
+park18 = Park.new(
   name: "Parc de la Morâche",
   address: "Rue du Ronzier 9, 1260 Nyon, Suisse",
   description: "D'une surface de 12'000 m2, le parc de la Morâche a été inauguré en 2018. Lieu polyvalent destiné à la détente, aux rencontres et aux loisirs, ce modèle de biodiversité urbaine est un trait d'union entre les quartiers nord et sud de la ville. Les promeneurs découvriront sur place, l'oeuvre d'art Les Ailes du Cossy d'Emilie Ding.",
@@ -365,11 +365,11 @@ park17 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809755/NYO_Morache_fsmgpk.jpg")
-park17.photo.attach(io: file, filename: "Parc de la Morâche.jpg", content_type: "image/jpg")
+park18.photo.attach(io: file, filename: "Parc de la Morâche.jpg", content_type: "image/jpg")
 
   #Signal-de-Bougy
 
-park18 = Park.new(
+park19 = Park.new(
   name: "Parc de Signal-de-Bougy",
   address: " Rte du Signal, 1172 Bougy-Villars, Suisse",
   description: "Le parc de Signal-de-Bougy est un parc public de 50 hectares situé à Bougy-Villars, en Suisse. Il est situé sur le flanc sud du Jura, à une altitude de 700 mètres, surplombant le lac Léman et les Alpes. Il est situé à proximité de la sortie de l'autoroute A1 de Rolle.",
@@ -385,11 +385,11 @@ park18 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809754/SGY-SIgnal_kusegk.jpg")
-park18.photo.attach(io: file, filename: "Parc de Signal-de-Bougy.jpg", content_type: "image/jpg")
+park19.photo.attach(io: file, filename: "Parc de Signal-de-Bougy.jpg", content_type: "image/jpg")
 
   #Aubonne
 
-park19 = Park.new(
+park20 = Park.new(
   name: "Place de jeux du Chêne",
   address: "Avenue du Chêne, 1170 Aubonne, Suisse",
   description: "Petite aire de jeux en plein coeur du village, très agréable.",
@@ -405,11 +405,11 @@ park19 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809754/ABE_aubonne_cpelyv.jpg")
-park19.photo.attach(io: file, filename: "Place de jeux du Chêne.jpg", content_type: "image/jpg")
+park20.photo.attach(io: file, filename: "Place de jeux du Chêne.jpg", content_type: "image/jpg")
 
   #Morges
 
-park20 = Park.new(
+park21 = Park.new(
   name: "Parc de l'Indépendance",
   address: "Avenue de l'Indépendance 1, 1110 Morges, Suisse",
   description: "Le Parc de l'indépendance se situe au bord du lac Léman, entre le château de Morges et la Morges. De nombreuses manifestations y sont organisées tout au long de l'année. Il est également possible de louer des barques et des pédalos pour profiter du lac.",
@@ -425,9 +425,9 @@ park20 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809756/MGE_Independance_byfjx6.jpg")
-park20.photo.attach(io: file, filename: "Parc de l'Indépendance.jpg", content_type: "image/jpg")
+park21.photo.attach(io: file, filename: "Parc de l'Indépendance.jpg", content_type: "image/jpg")
 
-park21 = Park.new(
+park22 = Park.new(
   name: "Parc de Vertou",
   address: "1110 Morges, Suisse",
   description: "Au sud-est de la Ville, le Parc de Vertou mélange des infrastructures sportives dans un lieu paisible au bord du lac.",
@@ -443,7 +443,7 @@ park21 = Park.new(
   suitable_from_age: 1)
 
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809755/MGE_Vertou_wwor07.jpg")
-park21.photo.attach(io: file, filename: "Parc de Vertou.jpg", content_type: "image/jpg")
+park22.photo.attach(io: file, filename: "Parc de Vertou.jpg", content_type: "image/jpg")
 
 
   puts "Saving parks"
@@ -469,6 +469,7 @@ park18.save
 park19.save
 park20.save
 park21.save
+park22.save
 
   puts "Creating chatrooms"
 
@@ -493,6 +494,7 @@ chatroom18 = Chatroom.new(name: "Parc de la Morâche", park_id: park18.id)
 chatroom19 = Chatroom.new(name: "Parc de Signal-de-Bougy", park_id: park19.id)
 chatroom20 = Chatroom.new(name: "Place de jeux du Chêne", park_id: park20.id)
 chatroom21 = Chatroom.new(name: "Parc de l'Indépendance", park_id: park21.id)
+chatroom22 = Chatroom.new(name: "Parc de Vertou", park_id: park22.id)
 
   puts "Saving chatrooms"
 
@@ -517,3 +519,4 @@ chatroom18.save
 chatroom19.save
 chatroom20.save
 chatroom21.save
+chatroom22.save
