@@ -4,7 +4,7 @@ class ParksController < ApplicationController
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,
-        lng: park.longitude
+        lng: park.longitude,
       }
     end
   end
@@ -13,7 +13,7 @@ class ParksController < ApplicationController
     @park = Park.find(params[:id])
     @marker = [{
       lat: @park.latitude,
-      lng: @park.longitude
+      lng: @park.longitude,
     }]
   end
 
