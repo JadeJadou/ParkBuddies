@@ -1,9 +1,12 @@
-<h1>ParkBuddies</h1>
+<div class="container mt-3, center">
+  <h1>ParkBuddies</h1>
+</div>
 <div class="container map-flex">
   <div style="width: 300px; height: 250px; p-20; flex-shrink: 0;" class="formatmap"
     data-controller="map"
     data-map-markers-value="<%= @marker.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
   <div>
     <%if @park.photo.attached?  %>
       <%= cl_image_tag @park.photo.key, class: "photo"%>
@@ -12,7 +15,7 @@
 </div>
 
 <div class="container">
-  <div class="flex">
+  <div class="flex mt-5">
     <h2><%= @park.name %></h2>
     <div class="flex-end">
       <i class="fa-regular fa-heart fa-lg" style="color: #ff1a1a;"></i>
@@ -20,8 +23,15 @@
   </div>
   <p><%= @park.description %></p>
   <div class="flex">
-    <%= @park.category %>
-    <%= @park.suitable_from_age %>
+    <div class="type">
+      <%= @park.category %>
+    </div>
+    <div class="type">
+    <%= @park.suitable_from_age %> ans et +
+    </div>
   </div>
   <%= render "option"  %>
+  <br>
+  <%= link_to "ChatRoom", "#", class: "btn-large" %>
+  <br>
 </div>
