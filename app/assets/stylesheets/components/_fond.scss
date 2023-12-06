@@ -1,3 +1,12 @@
 .fond-gray {
   background-color: $verylight-gray;
 }
+
+#circle {
+  width: 100%;
+  height: 200px;
+  background: $greenbis;
+
+    border-bottom-left-radius: 230px; // 4*height
+    border-bottom-right-radius: 230px;
+}
