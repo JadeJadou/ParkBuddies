@@ -11,6 +11,7 @@ class ParksController < ApplicationController
 
   def show
     @park = Park.find(params[:id])
+    @favorite = Favorite.find_by(park: @park, user: current_user) || Favorite.new # cherche le fav si c'est déja liker et sinon crée un nouveau fav pour le bouton
     @marker = [{
       lat: @park.latitude,
       lng: @park.longitude
