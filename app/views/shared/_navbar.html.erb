@@ -3,7 +3,7 @@
     <ul class="navbar-nav mx-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-           <%= link_to "/", class: "navbar-brand" do %>
+           <%= link_to chatrooms_path, class: "navbar-brand" do %>
             <i class="fa-solid fa-comments" style="color: #000000;"></i>
           <% end %>
         </li>
