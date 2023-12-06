@@ -1,4 +1,5 @@
-<h2>Créer ton compte </h2>
+<div class="container" data-controller="signup-form">
+<h2>Crées ton compte </h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -30,22 +31,24 @@
                 :label => 'Ville',
                 required: true %>
     <%= f.input :kids_count,
-                :label => 'Nombre d\'enfants',
+                :label => 'Nombre d\'enfant(s)',
+                as: :select,
+                collection: 1..7,
                 required: true %>
     <%= f.input :kids_average_age,
-                label:'Age des enfants',
+                label:'Age des enfant(s)',
                 as: :check_boxes,
                 collection: 1..10,
-                required: true %>
-    <%= f.input :avatar,
-                :label => 'Avatar',
-                as: :file,
-                required: true %>
+                required: true,
+                input_html:{data: {action: "change->signup-form#calculateAverage", signup_form_target: "input"}}%>
+    <%= f.input :kids_average_age,
+                as: :hidden,
+                input_html:{data: {signup_form_target: "hiddenInput"}}
+                %>
   </div>
 
   <div class="form-actions">
   <%= f.button :submit,"Rejoins la communauté", class:"btn-text-noir" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>
