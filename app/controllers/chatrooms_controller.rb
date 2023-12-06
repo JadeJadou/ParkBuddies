@@ -2,7 +2,11 @@ class ChatroomsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @chatrooms = Chatroom.all
+    @message = Message.new
+    @chatrooms = current_user.chatrooms
+    if params[:query].present?
+      @chatrooms = @chatrooms.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show
@@ -10,4 +14,5 @@ class ChatroomsController < ApplicationController
     @message = Message.new
     @messages = @chatroom.messages
   end
+
 end

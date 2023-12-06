@@ -65,3 +65,24 @@
   justify-content: space-between;
   position: relative;
 }
+
+.card-chatroom {
+  width: 99%;
+  height: 90px;
+  background: white;
+  border-bottom: 1px solid $light-gray;
+  align-items: center;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  .chatroom-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .chatroom-infos {
+    padding: 16px;
+  }
+}
