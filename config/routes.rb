@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   # methods edit et update à revoir !!!
   resources :users, only: [:show, :edit, :update]
   resources :parks, only: [:index, :show] do
-    get "favorite", on: :member
+    resources :favorites, only: [:create]
   end
   resources :chatrooms, only: [:index, :show] do
     resources :messages, only: [:create]
   end
+  resources :favorites, only: [:destroy]
 end
