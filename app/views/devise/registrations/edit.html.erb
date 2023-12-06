@@ -11,14 +11,14 @@
     <% end %>
 
     <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
+                hint: "Laisse vide si tu ne veux pas changer ton mot de passe",
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
+                hint: "Il nous faut ton mot de passe actuel pour confirmer les changements",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>
