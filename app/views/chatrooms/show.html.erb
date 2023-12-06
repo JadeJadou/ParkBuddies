@@ -3,9 +3,11 @@
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
-  <h2><%= @chatroom.name %></h2>
 
   <div class="messages" data-chatroom-subscription-target="messages"%>
+    <div class="container text-center">
+      <p><strong><%= @chatroom.name %> chatroom</strong></p>
+    </div>
 
     <% @chatroom.messages.each do |message| %>
       <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
@@ -22,8 +24,12 @@
       class: "d-flex" }  do |f| %>
       <%=f.input :content, label: false,
       placeholder: "Ecrire un message @#{@chatroom.name}",
-      wrapper_html: {class:"flex-grow-1"} %>
-      <%= f.submit "Envoyer", class: "btn-message-sent" %>
+      wrapper_html: {class:"input2"} %>
+      <%# OU !!! a voir demain en ticket si possible <textarea class="input2" placeholder="Ecrire un message @Parc de Milan" name="message[content]" id="message_content"></textarea>%>
+
+      <button class="loupe" type="submit">
+        <i class="fa-solid fa-paper-plane fa-xl" style="color: #7f7f7f;"></i>
+      </button>
     <% end %>
   </div>
 </div>

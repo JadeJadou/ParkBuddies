@@ -6,7 +6,9 @@
 $body-font: 'Inter', sans-serif;
 $headers-font: 'Inter', sans-serif;
 
-
+h1 {
+  font-weight: 700 !important;
+}
 // To use a font file (.woff) uncomment following lines
 // @font-face {
 //   font-family: "Font Name";
