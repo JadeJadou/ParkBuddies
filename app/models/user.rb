@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :messages
+  has_many :chatrooms, through: :messages
   has_many :favorites
   has_many :parks, through: :favorites
   validates :first_name, presence: true

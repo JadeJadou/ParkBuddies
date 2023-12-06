@@ -22,3 +22,12 @@
 .nav-item {
   margin-left: 40px;
 }
+
+@media (max-width: 576px) {
+  .container-sm .container {
+    min-width: 540px;
+}
+.navbar-nav{
+  flex-direction: row;
+}
+}
