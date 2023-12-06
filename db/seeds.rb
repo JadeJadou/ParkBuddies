@@ -8,6 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 require "open-uri"
+
+Message.destroy_all
 Favorite.destroy_all
 User.destroy_all
 Chatroom.destroy_all
