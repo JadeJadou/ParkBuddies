@@ -18,16 +18,16 @@ puts "Creating users"
 #Lausanne
 user1 = User.create!(first_name: "John", last_name: "Lenon",  nickname:"Zigoto", address:"Lausanne", kids_average_age:"3", kids_count:"2", email: "john@email.com", password: "123456", avatar:"")
 user2 = User.create!(first_name: "Olivier",last_name: "Leroy", nickname:"OliveLsne", address:"Lausanne", kids_average_age:"7", kids_count:"3", email: "olivier@email.com", password: "azerty", avatar:"")
-user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"Ace3", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"")
-user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Ace4", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"")
+user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"DMArc", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"")
+user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Paul-Nord", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"")
 #Geneve
-user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"Ace5", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"")
-user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Ace6", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"")
-user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Ace7", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"")
+user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"JusdeFruits", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"")
+user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Marigold", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"")
+user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Piercing", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"")
 #Montreux
-user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Ace8", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"")
-user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Ace9", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"")
-user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Ace10", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"")
+user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Sophora", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"")
+user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Lucid", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"")
+user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Matrix", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"")
 
 puts "Creating parks"
 
