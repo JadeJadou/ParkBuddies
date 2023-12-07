@@ -1,4 +1,4 @@
-<div id="circle">
+<div id="circle-green">
 <br>
   <div class="container mt-3 text-center">
       <h1 class="mb-2">ParkBuddies</h1>
@@ -25,7 +25,7 @@
     <%= simple_form_for [@chatroom, @message],
       html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" },
       class: "d-flex" }  do |f| %>
-      <%=f.text_field :content, as: :text, label: false, size: 3, class: "custom-text-field",
+      <%=f.text_area :content, as: :text, label: false, size: 3, class: "custom-text-field",
       placeholder: "Ecrire un message @#{@chatroom.name}", class:"input2"%>
       <button class="plane" type="submit">
         <i class="fa-solid fa-paper-plane fa-xl"></i>

@@ -23,7 +23,7 @@
           <p><strong><%= chatroom.name %></strong></p>
           <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
         </div>
-          <p class="timestamp"><%= last_message.created_at.strftime('%H:%M') %></p>
+        <p class="timestamp"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
         <% else %>
         <div class="chatroom-infos">
           <p><strong><%= chatroom.name %></strong></p>
