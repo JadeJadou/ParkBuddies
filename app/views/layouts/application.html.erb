@@ -14,9 +14,6 @@
 
   <body>
     <%= render "shared/flashes" %>
-    <div class="container mt-3 text-center">
-      <h1>ParkBuddies</h1>
-    </div>
     <%= yield %>
     <%= render "shared/navbar" if current_user %>
   </body>
