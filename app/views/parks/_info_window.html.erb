@@ -1,4 +1,4 @@
-<%# <%= cl_image_tag @park.photo.key, height:30, width:40, crop: :fill %>
-<h2><%= park.name %></h2>
-<p><%= park.category %></p>
-<p><%= park.address %></p>
+<% if park.photo.attached?  %>
+<%= cl_image_tag park.photo.key, height:70, width: 120, crop: :fill %>
+<% end %>
+<p><%= park.name %></p>
