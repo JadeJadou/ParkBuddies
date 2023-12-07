@@ -28,4 +28,19 @@
       margin-bottom: 0;
     }
   }
+
+  .plane {
+    background-color: none !important;
+    border: none !important;
+    background: none !important;
+    color: $greenbis !important;
+    padding-bottom: 6px;
+  }
+}
+
+.custom-text-field {
+  border: none !important;
+  background: $verylight-gray !important;
+  padding-bottom: 6px;
+  border-radius: 8px;
 }

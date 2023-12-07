@@ -30,6 +30,10 @@
     <%= f.input :address,
                 :label => 'Ville',
                 required: true %>
+    <%= f.input :description,
+                :label => 'Description',
+                hint: "Explique nous pourquoi tu t'inscris sur ParkBuddies"
+                %>
     <%= f.input :kids_count,
                 :label => 'Nombre d\'enfant(s)',
                 as: :select,
