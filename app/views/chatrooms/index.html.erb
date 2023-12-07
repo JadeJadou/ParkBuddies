@@ -1,5 +1,6 @@
-<div class="container">
-  <div class="col-sm-8 my-3">
+<div class="container mt-3 text-center">
+      <h1>ParkBuddies</h1>
+      <br>
     <%= form_with url: chatrooms_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
@@ -11,7 +12,7 @@
         </button>
     <% end %>
   </div>
-</div>
+<br>
 <% if @chatrooms.any? %>
   <% @chatrooms.each do |chatroom| %>
     <% last_message = chatroom.messages.last %>
