@@ -5,7 +5,7 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :email, required: true, autofocus: true %>
+      <%= f.input :email, required: true, autofocus: true, input_html: {class: "custom-text-field" } %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>En attente de confirmation : <%= resource.unconfirmed_email %></p>
@@ -13,30 +13,38 @@
 
       <%= f.input :password,
                   hint: "Laisse vide si tu ne veux pas changer ton mot de passe",
+                  label: "Nouveau mot de passe",
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "custom-text-field" } %>
       <%= f.input :password_confirmation,
                   required: false,
-                  input_html: { autocomplete: "new-password" } %>
+                  label: "Confirmation du nouveau mot de passe",
+                  input_html: { autocomplete: "new-password", class: "custom-text-field" } %>
       <%= f.input :current_password,
+                  :label => 'Mot de passe actuel',
                   hint: "Il nous faut ton mot de passe actuel pour confirmer les changements",
                   required: true,
-                  input_html: { autocomplete: "current-password" } %>
+                  input_html: { autocomplete: "current-password", class: "custom-text-field" } %>
       <%= f.input :first_name,
                   :label => 'Prénom',
-                  required: false %>
+                  required: false,
+                  input_html: { class: "custom-text-field" } %>
       <%= f.input :last_name,
                   :label => 'Nom',
-                  required: false %>
+                  required: false,
+                  input_html: { class: "custom-text-field" } %>
       <%= f.input :nickname,
                   :label => 'Pseudo',
-                  required: false %>
+                  required: false,
+                  input_html: { class: "custom-text-field" } %>
       <%= f.input :address,
                   :label => 'Ville',
-                  required: false %>
+                  required: false,
+                  input_html: { class: "custom-text-field" } %>
       <%= f.input :description,
                   :label => 'Description',
-                  hint: "Explique-nous pourquoi tu es inscrit(e) sur ParkBuddies"
+                  hint: "Explique-nous pourquoi tu es inscrit(e) sur ParkBuddies",
+                  input_html: { class: "custom-text-field" }
                   %>
     </div>
 
