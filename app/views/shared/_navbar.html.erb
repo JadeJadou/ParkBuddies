@@ -2,19 +2,24 @@
   <div class="container">
     <ul class="navbar-nav mx-auto">
       <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to parks_path, class: "navbar-brand" do %>
+            <i class="fa-solid fa-list fa-lg" style="color: #000000;"></i>
+          <% end %>
+        </li>
         <li class="nav-item">
            <%= link_to chatrooms_path, class: "navbar-brand" do %>
-            <i class="fa-solid fa-comments fa-xl" style="color: #000000;"></i>
+            <i class="fa-solid fa-comments fa-lg" style="color: #000000;"></i>
           <% end %>
         </li>
         <li class="nav-item active">
           <%= link_to "/", class: "navbar-brand" do %>
-            <i class="fa-solid fa-house fa-xl" style="color: #000000;"></i>
+            <i class="fa-solid fa-house fa-lg" style="color: #000000;"></i>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to user_path(current_user), class: "navbar-brand" do %>
-            <i class="fa-solid fa-user fa-xl" style="color: #000000;"></i>
+            <i class="fa-solid fa-user fa-lg" style="color: #000000;"></i>
           <% end %>
         </li>
       <% else %>
