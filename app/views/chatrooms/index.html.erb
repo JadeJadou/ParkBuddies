@@ -1,3 +1,5 @@
+<div id="circle-green">
+<br>
 <div class="container mt-3 text-center">
       <h1>ParkBuddies</h1>
       <br>
@@ -12,7 +14,7 @@
         </button>
     <% end %>
   </div>
-<br>
+
 <% if @chatrooms.any? %>
   <% @chatrooms.distinct.each do |chatroom| %>
     <% last_message = chatroom.messages.last %>

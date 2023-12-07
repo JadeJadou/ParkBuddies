@@ -16,19 +16,19 @@
 </div>
 
 <div class="container">
-  <div class="flex-between mt-5">
+  <div class="flex-between mt-5 mb-2">
     <h2><%= @park.name %></h2>
     <% if @favorite.persisted? %>
       <%= link_to @favorite, data: {turbo_method: :delete} do %>
-          <i class="fa-solid fa-heart fa-lg" style="color: #ff0505;"></i>
+          <i class="fa-solid fa-heart fa-xl" style="color: #F28482;"></i>
       <% end  %>
     <% else %>
       <%= link_to [@park, @favorite], data: {turbo_method: :post} do %>
-        <i class="fa-regular fa-heart fa-lg" style="color: #ff1a1a;"></i>
+        <i class="fa-regular fa-heart fa-xl" style="color: #F28482;"></i>
       <% end %>
     <% end %>
   </div>
-  <p><%= @park.description %></p>
+
   <div class="flex">
     <div class="type">
       <%= @park.category %>
@@ -37,6 +37,7 @@
     <%= @park.suitable_from_age %> ans et +
     </div>
   </div>
+    <p class="mt-2"style="text-align: justify; padding:8px"><%= @park.description %></p>
   <%= render "option"  %>
   <br>
   <%= link_to "ChatRoom", chatroom_path, class: "btn-large" %>

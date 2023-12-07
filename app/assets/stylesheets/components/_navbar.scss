@@ -21,6 +21,9 @@
 
 .nav-item {
   margin-left: 40px;
+  .active {
+    color: #BED754;
+  }
 }
 
 @media (max-width: 576px) {
