@@ -2,11 +2,18 @@
   background-color: $verylight-gray;
 }
 
-#circle {
+#circle-green {
   width: 100%;
   height: 200px;
   background: $greenbis;
+  border-bottom-left-radius: 230px;
+  border-bottom-right-radius: 230px;
+}
 
-    border-bottom-left-radius: 230px; // 4*height
-    border-bottom-right-radius: 230px;
+#circle-coral {
+  width: 100%;
+  height: 236px;
+  background: $corail;
+  border-bottom-left-radius: 230px;
+  border-bottom-right-radius: 230px;
 }

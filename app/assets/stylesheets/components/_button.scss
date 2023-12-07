@@ -77,3 +77,16 @@
     color: white;
   }
 }
+
+.btn-corail {
+  color: white;
+  padding: 8px 24px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: $corail;
+  transition: 0.3s ease;
+  align-items: center;
+  text-decoration: none
+}
