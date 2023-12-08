@@ -1,7 +1,12 @@
 class ParksController < ApplicationController
   def index
     @parks = Park.all
-    # if params[:query].present?
+
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR address ILIKE :query"
+      @parks = @parks.where(sql_subquery, query: "%#{params[:query]}%")
+    end
+
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,
@@ -10,6 +15,7 @@ class ParksController < ApplicationController
       }
     end
   end
+
 
   def show
     @park = Park.find(params[:id])
