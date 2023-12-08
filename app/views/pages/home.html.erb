@@ -6,18 +6,30 @@
       <p><strong>Connectez, Rencontrez, Partagez</strong></p>
       <div class="col-md-4 text-center">
         <% if user_signed_in? %>
-            <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
-            <% else %>
-              <%= link_to "S'inscrire", new_user_session_path, class:"btn-text-noir" %>
-              <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc"%>
-            <% end %>
+          <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
+        <% else %>
+          <%= link_to "S'inscrire", new_user_registration_path, class:"btn-text-noir" %>
+          <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc" %>
+        <% end %>
       </div>
     </div>
   </div>
-
-
-<div style="p-20" class="map-show"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-
+  <div class="container">
+  </div>
+    <div class="container mt-3 text-center">
+      <%= form_with url: "/", method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "input",
+              style: "margin-left:26px",
+              placeholder: "Chercher un parc"
+          %>
+          <button class="loupe" type="submit">
+            <i class="fa-solid fa-magnifying-glass" style="color: #7f7f7f;"></i>
+          </button>
+      <% end %>
+  <div style="margin-top:2px" class="map-show"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
