@@ -15,6 +15,18 @@
   background: linear-gradient(#D0F288, #BED754);
   color: white;
 }
+.btn-vert-rond{
+  border-radius: 43px;
+  color: black;
+  padding: 8px 24px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-weight: bold;
+  background: #D0F288;
+  transition: 0.3s ease;
+  align-items: center;
+  text-decoration: none
+}
 
 .btn-text-blanc {
   color: white;

@@ -4,17 +4,19 @@
       <br>
       <p>L'appli qui transforme les parcs  en terrains d'amitié</p>
       <p><strong>Connectez, Rencontrez, Partagez</strong></p>
-    </div>
-  </div>
-
+      <br>
+      <br>
 <div class="col-md-4 text-center">
   <% if user_signed_in? %>
-      <%= link_to "Voir les parcs", parks_path, class: "btn-text-noir"%>
+      <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
       <% else %>
         <%= link_to "S'inscrire", new_user_session_path, class:"btn-text-noir" %>
         <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc" %>
       <% end %>
 </div>
+    </div>
+  </div>
+
 
 <div style="p-20" class="map-show"
   data-controller="map"
