@@ -10,7 +10,7 @@
   <% if user_signed_in? %>
       <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
       <% else %>
-        <%= link_to "S'inscrire", new_user_session_path, class:"btn-text-noir" %>
+        <%= link_to "S'inscrire", new_user_registration_path, class:"btn-text-noir" %>
         <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc" %>
       <% end %>
 </div>
