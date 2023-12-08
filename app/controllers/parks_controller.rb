@@ -1,6 +1,7 @@
 class ParksController < ApplicationController
   def index
     @parks = Park.all
+    # if params[:query].present?
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,
@@ -15,7 +16,8 @@ class ParksController < ApplicationController
     @favorite = Favorite.find_by(park: @park, user: current_user) || Favorite.new # cherche le fav si c'est déja liker et sinon crée un nouveau fav pour le bouton
     @marker = [{
                 lat: @park.latitude,
-                lng: @park.longitude
+                lng: @park.longitude,
+                info_window_html: render_to_string(partial: "info_window", locals: { park: @park })
               }]
   end
 
