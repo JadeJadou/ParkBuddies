@@ -181,7 +181,7 @@ park8 = Park.new(
   toys_rent: false,
   suitable_from_age: 1)
 
-file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809754/GE_Eaux-Vives_vwgtvz.jpg")
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030496/Parcs/GE_EAUXVIVES_vewcqe.jpg")
 park8.photo.attach(io: file, filename: "Parc des Eaux-Vives.jpg", content_type: "image/jpg")
 
 park9 = Park.new(
@@ -235,7 +235,7 @@ park11 = Park.new(
   toys_rent: false,
   suitable_from_age: 1)
 
-file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809754/GE_Franchises_jprnq8.jpg")
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701810290/GE_parc-cropettes-geneve_qpc9gz.jpg")
 park11.photo.attach(io: file, filename: "Parc des Cropettes.jpg", content_type: "image/jpg")
 
   #Montreux
@@ -447,6 +447,278 @@ park22 = Park.new(
 file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1701809755/MGE_Vertou_wwor07.jpg")
 park22.photo.attach(io: file, filename: "Parc de Vertou.jpg", content_type: "image/jpg")
 
+  #Paris
+
+park23 = Park.new(
+  name: "Parc de Belleville",
+  address: "47 Rue des Couronnes, 75020 Paris, France",
+  description: "À l'abordage ! Direction le parc de Belleville dans le 20e arrondissement pour partir à la découverte de la nouvelle aire de jeux inaugurée en novembre 2019. Occupée un temps par « le paquebot », impressionnante construction faite de bois et de béton, place à présent à une structure plus sécurisée, mais qui conserve néanmoins un petit côté téméraire avec sa pente inclinée à 30 degrés qui ravira les petits casse-cou à partir de 6 ans.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: true,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 6)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030077/Parcs/PAR_Belleville_m55ehx.jpg")
+park23.photo.attach(io: file, filename: "Parc de Belleville.jpg", content_type: "image/jpg")
+
+park24 = Park.new(
+  name: "Parc Chapelle-Charbon",
+  address: "75018 Paris, France",
+  description: "Entre la porte de la Chapelle et la porte d’Aubervilliers, le parc Chapelle-Charbon s’inscrit dans le Grand Projet de Renouvellement Urbain de Paris Nord Est. Ce morceau de campagne à Paris se veut naturel et sobre en mettant l'accent sur une biodiversité, avec une flore majoritairement francilienne et la création de milieux diversifiés et équilibrés. Le parc est aussi un formidable terrain de jeux pour les enfants de 1 à 12 ans. À eux, mur d’escalade (350 m² et 680 m²), parcours d’aventure (240 m²), espace de jeux avec baby-foot, ping-pong, terrain de pétanque. Un espace de buvette, une terrasse de rencontre et une scène complètent l'ensemble.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: true,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 4)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030072/Parcs/PAR_ChapelleCarbon_y0lkmv.jpg")
+park24.photo.attach(io: file, filename: "Parc Chapelle-Charbon.jpg", content_type: "image/jpg")
+
+park25 = Park.new(
+  name: "Parc de Clichy-Batignolles",
+  address: "147 Rue Cardinet, 75017 Paris, France",
+  description: "Le parc s'est agrandi en avril 2014 pour atteindre sa taille définitive de 10 ha fin 2020. Écolo, il s'intègre dans ce tout nouveau quartier des Batignolles. Deux zones d'aires de jeux pour les enfants et les adolescents avec des terrains pour les jeux de ballon, un skate park, un espace pour le basket-ball… mais aussi bancs et transats en font un lieu vivant où une population intergénérationnelle peut se croiser et se retrouver. Les plus âgés peuvent admirer l'énergie des plus jeunes tentant de réaliser sur leur skate des figures toujours plus acrobatiques !",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030075/Parcs/PAR_ClichyBatignolle_tkjw65.jpg")
+park25.photo.attach(io: file, filename: "Parc de Clichy-Batignolles.jpg", content_type: "image/jpg")
+
+park26 = Park.new(
+  name: "Parc André Citroën",
+  address: "2 Rue Cauchy, 75015 Paris, France",
+  description: "Le parc André-Citroën est situé à l’emplacement de l’ancienne usine parisienne de Citroën. Inauguré en 1992, d’une superficie de 14 hectares, il est l’un des parcs les plus récents de la capitale. Cet écrin de verdure offre une promenade verdoyante et variée. Outre des tables de ping-pong ou d’échecs en accès-libre, des jeux d’eau et une gigantesque serre tropicale, Là-Haut est un parcours ludique et aérien mêlant, jeux d’agilité, activité sportive, défi et moments de détente qui ravira les enfants.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: true,
+  zoo: false,
+  toys_rent: true,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030067/Parcs/PAR_Andre%CC%81Citroen_unldlv.jpg")
+park26.photo.attach(io: file, filename: "Parc André Citroën.jpg", content_type: "image/jpg")
+
+park27 = Park.new(
+  name: "Parc Floral de Paris",
+  address: "Route de la Pyramide, 75012 Paris, France",
+  description: "Situé dans le bois de Vincennes, le Parc floral de Paris n’accueille pas seulement une merveilleuse collection de 3 000 variétés de plantes différentes. Il abrite également une belle aire de jeux pour les plus jeunes : toboggans, balançoires, tourniquet, tunnels et d'autres cachettes qui raviront les petits.… sans oublier la tour Amazone et sa grande glissade à 6 mètres de hauteur et aussi une structure à grimper impressionnante de dix mètres de haut… Mais ce qui émerveillera les plus jeunes reste sans conteste cette aire de jeux, véritable serre aux papillons plantée au sommet d’une butte à dévaler bras écartés pour avoir l’impression de voler.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030069/Parcs/PAR_Floral_mns2dm.jpg")
+park27.photo.attach(io: file, filename: "Parc Floral de Paris.jpg", content_type: "image/jpg")
+
+park28 = Park.new(
+  name: "Le Jardin de Nelson Mandela",
+  address: "32, rue Berger 75001 PARIS",
+  description: "Face à la Canopée des Halles, le jardin Nelson-Mandela vous entraîne dans un monde ludique et coloré. L'équipe du sculpteur Henri Marquet a imaginé un univers à mi-chemin entre le Magicien d'Oz et Mario Bros, avec des jeux innovants. Ici, liberté de jouer ! Spécialement conçu pour le plaisir et l’épanouissement des enfants de 7 à 11 ans, il favorise le développement de leur imaginaire et de leurs facultés physiques ainsi que leur socialisation. Sur 2 500 m², il conjugue équipements récréatifs inédits et sculptures monumentales propices à la rêverie et à la fabrication d’histoires, espaces pour jeux spontanés, lieux de repos…",
+  category: "Moyen",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: false,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: true,
+  suitable_from_age: 7)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030066/Parcs/PAR_Mandela_hm8feu.jpg")
+park28.photo.attach(io: file, filename: "Le Jardin de Nelson Mandela.jpg", content_type: "image/jpg")
+
+  #Lyon
+
+park29 = Park.new(
+  name: "Parc de la Tête d'Or",
+  address: "69006 Lyon, France",
+  description: "Le parc de la Tête d’Or est l’un des plus grands parcs urbains de France. Situé sur les bords du Rhône, il offre 105 hectares de vastes pelouses, arbres centenaires, massifs fleuris, parterres de roses ou de pivoines, apportant en toutes saisons des touches colorées et parfumées.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: false,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030081/Parcs/LYO_TeteOR_mtp5ru.jpg")
+park29.photo.attach(io: file, filename: "Parc de la Tête d'Or.jpg", content_type: "image/jpg")
+
+park30 = Park.new(
+  name: "Parc Blandan",
+  address: "Place Blandan, 69007 Lyon, France",
+  description: "Une aire de jeux nouvelle génération
+  Les enfants de 3 à 12 ans peuvent partir à l'assaut de la Vague des remparts, un aménagement qui offre une aire de jeux exceptionnelle de 1000 m2.
+  Cette construction en bois, spécifiquement pensée pour le parc Blandan fait appel à l'imaginaire de la fortification, permettant de grimper, attaquer, glisser, se cacher dans des niches selon l'imagination des enfants qui seront ravis de partir à l'abordage de ce vaisseau de bois truffé d'installations ludiques.
+  La Vague des remparts dispose de trois niveaux, chacun accueillant des enfants d'âges différents : des chevaux en bois pour les 3-4 ans, la partie basse de la Vague et des boulets à canon pour les 4-8 ans et la partie haute, niches et passages secrets pour les 8-12 ans.
+  Celle-ci propose de nombreux cheminements avec 70 mètres de cordages, 120 prises d'escalade et des niches communiquant entre elles.
+  Une coursive de 50 mètres de long offre un point de vue en hauteur et dessert 3 toboggans tubulaires situés à 4,50m de hauteur.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: false,
+  climber: false,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 3)
+
+  file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030080/Parcs/LYO_Blandan_layt2u.jpg")
+  park30.photo.attach(io: file, filename: "Parc Blandan.jpg", content_type: "image/jpg")
+
+#Annecy
+
+park31 = Park.new(
+  name: "Parc des Jardins de l'Europe",
+  address: "Avenue de France, 74000 Annecy, France",
+  description: "À l’origine deux îles marécageuses, l’aménagement d’un jardin public présentant une collection d'arbres ornementaux participe à la valorisation des beautés naturelles des rives du lac.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: false,
+  coffee: true,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+  file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030292/Parcs/ACY_Europe_gjnbjz.jpg")
+  park31.photo.attach(io: file, filename: "Parc des Jardins de l'Europe.jpg", content_type: "image/jpg")
+
+park32 = Park.new(
+  name: "Parc Le Pâquier",
+  address: "74000 Annecy, France",
+  description: "Ce grand espace de verdure (6,2 ha) qui ouvre sur la perspective du lac et des montagnes suscite l’admiration des visiteurs.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: true,
+  coffee: true,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+  file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030293/Parcs/ACY-Paquier_twxulk.jpg")
+  park32.photo.attach(io: file, filename: "Parc Le Pâquier.jpg", content_type: "image/jpg")
+
+park36 = Park.new(
+  name: "Square de l'Evêché",
+  address: "74000 Annecy, France",
+  description: "La forteresse des temps modernes, conception Ville d'Annecy & Pro Urba
+  Avec une structure tout bois sur la thématique du château accessible aux personnes à mobilité réduite (PMR), l’aire de jeux rappelle la forteresse qui domine la ville.
+
+  Le choix des jeux s’est porté sur des matériaux nobles comme le bois lamellé collé Robinier (faux acacia) et l’inox, afin d’apporter un style contemporain approprié à l’air du temps.
+  Le sol a été réalisé avec des dalles amortissantes recouvertes d’un gazon synthétique Terragreen afin de se fondre avec les espaces verts.
+
+  Cet espace offre une capacité d’accueil de 60 enfants, répondant ainsi à une fréquentation importante et constante.",
+  category: "Moyen",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: false,
+  climber: true,
+  coffee: false,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 3)
+
+  file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030070/Parcs/ACY_Eveche_vsb1zv.jpg")
+  park36.photo.attach(io: file, filename: "Square de l'Evêché.jpg", content_type: "image/jpg")
+
+  #Rennes
+
+park33 = Park.new(
+  name: "Parc du Thabor",
+  address: "Place Saint-Mélaine, 35000 Rennes, France",
+  description: "e jardin du Thabor invite autant à être studieux que paresseux… Les étudiants des facs toutes proches viennent réviser, lire ou rêvasser, les familles se baladent en allant aux jeux d’enfants, les promeneurs admirent la roseraie et ses 2000 variétés. Au détour des chemins on découvre une grotte étrange, des cascades et des arbres, remarquables en toutes saisons.
+
+  Dans ce lieu emblématique de la capitale bretonne, on peut également boire un verre en terrasse, faire un tour de manège ou pratiquer le running sur une boucle de 1,5Km très vallonnée qui fait le tour du Parc. Bref, le Thabor, c’est le Paradis. En pleine ville.",
+  category: "Grand",
+  sandbox: true,
+  slide: true,
+  sling: true,
+  water: true,
+  climber: false,
+  coffee: true,
+  zoo: false,
+  toys_rent: false,
+  suitable_from_age: 1)
+
+  file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030078/Parcs/RNS_Thabor_fskude.jpg")
+  park33.photo.attach(io: file, filename: "Parc du Thabor.jpg", content_type: "image/jpg")
+
+  park34 = Park.new(
+    name: "Parc des Tanneurs",
+    address: "35000 Rennes, France",
+    description: "C’est un petit coin de verdure à l’abri des regards : le Parc des Tanneurs forme un vallon arboré qui s’écoule jusqu’à la rivière l’Ille et les prairies Saint-Martin. On y pénètre par la Rue Saint-Martin, en passant par une grande grille qui donne sur une belle villa du XIXème. Une propriété prestigieuse, autrefois habitée par des familles de tanneurs, d’où son nom. Il faut oser entrer dans ce parc d’un peu plus d’un hectare pour apprécier son charme romantique et admirer de beaux spécimens de séquoias. 90 arbres sont plantés dans le vallon et participent de l’atmosphère reposante du lieu. Une balade inattendue et verdoyante, à seulement 5 minutes à pied de la Place Sainte-Anne, à prolonger en revenant par le Canal Saint-Martin et les prairies du même nom.",
+    category: "Moyen",
+    sandbox: true,
+    slide: true,
+    sling: true,
+    water: false,
+    climber: false,
+    coffee: false,
+    zoo: false,
+    toys_rent: false,
+    suitable_from_age: 1)
+
+    file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030074/Parcs/RNS_Tanneurs_njkdsq.jpg")
+    park34.photo.attach(io: file, filename: "Parc des Tanneurs.jpg", content_type: "image/jpg")
+
+    park35 = Park.new(
+      name: "Parc Oberthür",
+      address: "35000 Rennes, France",
+      description: "Le Parc Oberthür a été aménagé par le même paysagiste que celui du Thabor, Denis Bühler, quelques années avant, en 1863. Le parc forme un magnifique écrin autour de l’hôtel particulier du célèbre imprimeur rennais, François-Charles Oberthür. Pour ce notable passionné d’entomologie et de botanique, Bühler conserva les grands arbres, en particulier de magnifiques chênes, merisiers, hêtres et peupliers. Des arbres de grande taille déploient leur ombre sur ce très joli parc où il fait bon se promener : cèdres, des hêtres laciniés, des chênes pédonculés, des tilleuls argentés, des Gingko Biloba…",
+      category: "Grand",
+      sandbox: true,
+      slide: true,
+      sling: true,
+      water: true,
+      climber: false,
+      coffee: true,
+      zoo: false,
+      toys_rent: false,
+      suitable_from_age: 1)
+
+      file = URI.open("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702030073/Parcs/RNS_Oberthur_kbxdo0.jpg")
+      park35.photo.attach(io: file, filename: "Parc Oberthür.jpg", content_type: "image/jpg")
 
   puts "Saving parks"
 
@@ -472,6 +744,20 @@ park19.save
 park20.save
 park21.save
 park22.save
+park23.save
+park24.save
+park25.save
+park26.save
+park27.save
+park28.save
+park29.save
+park30.save
+park31.save
+park32.save
+park33.save
+park34.save
+park35.save
+park36.save
 
   puts "Creating chatrooms"
 
@@ -497,6 +783,21 @@ chatroom19 = Chatroom.new(name: "Parc de Signal-de-Bougy", park_id: park19.id)
 chatroom20 = Chatroom.new(name: "Place de jeux du Chêne", park_id: park20.id)
 chatroom21 = Chatroom.new(name: "Parc de l'Indépendance", park_id: park21.id)
 chatroom22 = Chatroom.new(name: "Parc de Vertou", park_id: park22.id)
+chatroom23 = Chatroom.new(name: "Parc de Belleville", park_id: park23.id)
+chatroom24 = Chatroom.new(name: "Parc Chapelle-Charbon", park_id: park24.id)
+chatroom25 = Chatroom.new(name: "Parc de Clichy-Batignolles", park_id: park25.id)
+chatroom26 = Chatroom.new(name: "Parc André Citroën", park_id: park26.id)
+chatroom27 = Chatroom.new(name: "Parc Floral de Paris", park_id: park27.id)
+chatroom28 = Chatroom.new(name: "Le Jardin de Nelson Mandela", park_id: park28.id)
+chatroom29 = Chatroom.new(name: "Parc de la Tête d'Or", park_id: park29.id)
+chatroom30 = Chatroom.new(name: "Parc Blandan", park_id: park30.id)
+chatroom31 = Chatroom.new(name: "Parc des Jardins de l'Europe", park_id: park31.id)
+chatroom32 = Chatroom.new(name: "Parc Le Pâquier", park_id: park32.id)
+chatroom33 = Chatroom.new(name: "Square de l'Evêché", park_id: park36.id)
+chatroom34 = Chatroom.new(name: "Parc du Thabor", park_id: park33.id)
+chatroom35 = Chatroom.new(name: "Parc des Tanneurs", park_id: park34.id)
+chatroom36 = Chatroom.new(name: "Parc Oberthür", park_id: park35.id)
+
 
   puts "Saving chatrooms"
 
@@ -522,3 +823,17 @@ chatroom19.save
 chatroom20.save
 chatroom21.save
 chatroom22.save
+chatroom23.save
+chatroom24.save
+chatroom25.save
+chatroom26.save
+chatroom27.save
+chatroom28.save
+chatroom29.save
+chatroom30.save
+chatroom31.save
+chatroom32.save
+chatroom33.save
+chatroom34.save
+chatroom35.save
+chatroom36.save
