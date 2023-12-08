@@ -2,24 +2,24 @@
   <div class="container">
     <ul class="navbar-nav mx-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
+        <li class="nav-item <%= 'active' if current_page?(parks_path) %>">
           <%= link_to parks_path, class: "navbar-brand" do %>
-            <i class="fa-solid fa-list fa-lg" style="color: #000000;"></i>
+            <i class="fa-solid fa-list fa-lg <%= 'active-icon' if current_page?(parks_path) %>" ></i>
           <% end %>
         </li>
-        <li class="nav-item">
-           <%= link_to chatrooms_path, class: "navbar-brand" do %>
-            <i class="fa-solid fa-comments fa-lg" style="color: #000000;"></i>
+        <li class="nav-item <%= 'active' if current_page?(root_path) %>">
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <i class="fa-solid fa-house fa-lg <%= 'active-icon' if current_page?(root_path) %>" ></i>
           <% end %>
         </li>
-        <li class="nav-item active">
-          <%= link_to "/", class: "navbar-brand" do %>
-            <i class="fa-solid fa-house fa-lg" style="color: #000000;"></i>
+        <li class="nav-item <%= 'active' if current_page?(chatrooms_path) %>">
+          <%= link_to chatrooms_path, class: "navbar-brand" do %>
+            <i class="fa-solid fa-comments fa-lg <%= 'active-icon' if current_page?(chatrooms_path) %>" ></i>
           <% end %>
         </li>
-        <li class="nav-item">
+        <li class="nav-item <%= 'active' if current_page?(user_path(current_user)) %>">
           <%= link_to user_path(current_user), class: "navbar-brand" do %>
-            <i class="fa-solid fa-user fa-lg" style="color: #000000;"></i>
+            <i class="fa-solid fa-user fa-lg <%= 'active-icon' if current_page?(user_path(current_user)) %>" ></i>
           <% end %>
         </li>
       <% else %>

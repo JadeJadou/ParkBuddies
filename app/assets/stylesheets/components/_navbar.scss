@@ -26,6 +26,10 @@
   }
 }
 
+.active-icon {
+  color: $corail;
+}
+
 @media (max-width: 576px) {
   .container-sm .container {
     min-width: 540px;
