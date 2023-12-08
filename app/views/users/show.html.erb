@@ -7,16 +7,23 @@
 
 </div>
   <div class="container">
-    <%= link_to  destroy_user_session_path, data: {turbo_method: :delete}  do%>
-      <i class="fa-solid fa-right-from-bracket fa-2xl" style="color: #000000;"></i>
-    <% end %>
-        <%= link_to  edit_user_registration_path(@user), class:"text-decoration-none", style:"color: inherit" do%>
-        <i class="fa-solid fa-gear fa-2xl d-flex justify-content-end" style="color: #000000;"></i>
+    <div class="row">
+        <div class="col">
+        <%= link_to  destroy_user_session_path, data: {turbo_method: :delete}  do%>
+          <i class="fa-solid fa-right-from-bracket fa-2xl" style="color: #000000;"></i>
         <% end %>
-      <div class="center mt-5">
-        <h2><strong><%= @user.nickname %></strong></h2>
-      </div>
+        </div>
+      <div class="col">
+          <%= link_to  edit_user_registration_path(@user), class:"text-decoration-none", style:"color: inherit" do%>
+          <i class="fa-solid fa-gear fa-2xl mt-2 d-flex justify-content-end" style="color: #000000;"></i>
+          <% end %>
+        </div>
+        <div class="center mt-5">
+          <h2><strong><%= @user.nickname %></strong></h2>
+        </div>
+    </div>
   </div>
+
 
   <ul class="nav justify-content-center" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
