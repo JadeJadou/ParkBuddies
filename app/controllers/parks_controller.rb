@@ -1,6 +1,7 @@
 class ParksController < ApplicationController
   def index
     @parks = Park.all
+    # if params[:query].present?
     @markers = @parks.geocoded.map do |park|
       {
         lat: park.latitude,

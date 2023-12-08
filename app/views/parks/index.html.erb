@@ -12,7 +12,6 @@
 </div>
   <br>
 <div class="container">
-  <div class="card-wrap cards">
     <% @parks.each do | park | %>
       <%= link_to park_path(park), class:"text-decoration-none", style:"color: inherit" do %>
         <div class="card-park">
@@ -24,5 +23,4 @@
         </div>
       <% end %>
       <% end %>
-  </div>
 </div>
