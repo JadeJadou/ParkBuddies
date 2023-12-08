@@ -3,8 +3,11 @@ class ParksController < ApplicationController
     @parks = Park.all
 
     if params[:query].present?
-      sql_subquery = "name ILIKE :query OR address ILIKE :query"
-      @parks = @parks.where(sql_subquery, query: "%#{params[:query]}%")
+      searchable_columns = %w[name address category]
+      conditions = searchable_columns.map { |col| "parks.#{col} ILIKE :query" }.join(' OR ')
+      @parks = @parks.where(conditions, query: "%#{params[:query]}%")
+      # sql_subquery = "name ILIKE :query OR address ILIKE :query"
+      # @parks = @parks.where(sql_subquery, query: "%#{params[:query]}%")
     end
 
     @markers = @parks.geocoded.map do |park|

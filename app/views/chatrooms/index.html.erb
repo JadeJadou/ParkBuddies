@@ -10,7 +10,7 @@
             placeholder: "Chercher une discussion"
         %>
         <button class="loupe" type="submit">
-          <i class="fa-solid fa-magnifying-glass" style="color: #7f7f7f;"></i>
+          <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #7f7f7f;"></i>
         </button>
     <% end %>
   </div>
@@ -22,7 +22,7 @@
       <div class="card-chatroom">
         <% if last_message %>
         <div class="chatroom-infos">
-          <p><strong><%= chatroom.name %></strong></p>
+          <p><strong style="color:#F28482"><%= chatroom.name %></strong></p>
           <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
         </div>
         <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
