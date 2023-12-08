@@ -18,18 +18,18 @@ Park.destroy_all
 puts "Creating users"
 
 #Lausanne
-user1 = User.create!(first_name: "John", last_name: "Lenon",  nickname:"Zigoto", address:"Lausanne", kids_average_age:"3", kids_count:"2", email: "john@email.com", password: "123456", avatar:"")
-user2 = User.create!(first_name: "Olivier",last_name: "Leroy", nickname:"OliveLsne", address:"Lausanne", kids_average_age:"7", kids_count:"3", email: "olivier@email.com", password: "azerty", avatar:"")
-user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"DMArc", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"")
-user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Paul-Nord", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"")
+user1 = User.create!(first_name: "John", last_name: "Lenon",  nickname:"Zigoto", address:"Lausanne", kids_average_age:"3", kids_count:"2", email: "john@email.com", password: "123456", avatar:"", description: "Je suis un père qui adore emmener mes deux enfants au parc. Nous passons des moments incroyables ensemble, mais je trouve ça un peu dommage de ne pas avoir l’occasion de rencontrer d’autres parents avec qui partager ces instants.")
+user2 = User.create!(first_name: "Olivier",last_name: "Leroy", nickname:"OliveLsne", address:"Lausanne", kids_average_age:"7", kids_count:"3", email: "olivier@email.com", password: "azerty", avatar:"", description: "Je m’appelle OliveLsne, et chaque sortie au parc avec mes deux enfants est un moment de bonheur. Cependant, je ressens une pointe de regret de ne pas pouvoir échanger avec d’autres parents lors de ces moments précieux.")
+user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"DMArc", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"", description: "Je suis DMArc, et chaque visite au parc avec mes deux enfants est un pur plaisir. Nous jouons et rions ensemble, mais j’avoue que j’aimerais parfois pouvoir discuter avec d’autres parents pendant que les enfants s’amusent.")
+user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Paul-Nord", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"", description: "Je m’appelle Paul-Nord, et j’adore emmener mes deux enfants au parc pour profiter de la nature et des jeux. J’aimerais aussi saisir l’occasion de rencontrer d’autres parents, pour échanger des expériences et créer des liens d’amitié.")
 #Geneve
-user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"JusdeFruits", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"")
-user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Marigold", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"")
-user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Piercing", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"")
+user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"JusdeFruits", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"", description: "Je m’appelle JusdeFruits, et je chéris les moments passés au parc avec mes deux enfants. C’est toujours une aventure, mais parfois, je souhaite qu’il y ait plus d’opportunités pour moi de rencontrer et de se lier d’amitié avec d’autres parents.")
+user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Marigold", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"", description: "Je m’appelle Marigold, et je trouve que les sorties au parc avec mes deux enfants sont des instants magiques. J’aspire à rencontrer d’autres parents lors de ces escapades, pour partager des conseils, des histoires et enrichir notre expérience familiale.")
+user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Piercing", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"", description: "")
 #Montreux
-user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Sophora", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"")
-user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Lucid", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"")
-user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Matrix", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"")
+user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Sophora", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"", description: "")
+user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Lucid", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"", description: "")
+user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Matrix", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"", description: "")
 
 puts "Creating parks"
 
@@ -667,7 +667,7 @@ park36 = Park.new(
 park33 = Park.new(
   name: "Parc du Thabor",
   address: "Place Saint-Mélaine, 35000 Rennes, France",
-  description: "e jardin du Thabor invite autant à être studieux que paresseux… Les étudiants des facs toutes proches viennent réviser, lire ou rêvasser, les familles se baladent en allant aux jeux d’enfants, les promeneurs admirent la roseraie et ses 2000 variétés. Au détour des chemins on découvre une grotte étrange, des cascades et des arbres, remarquables en toutes saisons.
+  description: "Le jardin du Thabor invite autant à être studieux que paresseux… Les étudiants des facs toutes proches viennent réviser, lire ou rêvasser, les familles se baladent en allant aux jeux d’enfants, les promeneurs admirent la roseraie et ses 2000 variétés. Au détour des chemins on découvre une grotte étrange, des cascades et des arbres, remarquables en toutes saisons.
 
   Dans ce lieu emblématique de la capitale bretonne, on peut également boire un verre en terrasse, faire un tour de manège ou pratiquer le running sur une boucle de 1,5Km très vallonnée qui fait le tour du Parc. Bref, le Thabor, c’est le Paradis. En pleine ville.",
   category: "Grand",
