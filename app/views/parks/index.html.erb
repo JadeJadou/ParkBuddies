@@ -1,6 +1,10 @@
 <div class="container mt-3 text-center">
+<div style="position: absolute;margin-left: 26px;margin-top: -41px;">
 <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702043714/BP_Logos/Logo_3_svg_transp/PB_Logo_Full_Inline_Color_qripy8.svg", width: 400, height: 150) %></div>
 </div>
+</div>
+<br>
+<br>
 <div class="container mt-3 text-center">
     <%= form_with url: parks_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
@@ -8,7 +12,7 @@
             class: "input",
             placeholder: "Chercher un parc"
         %>
-        <button class="loupe" type="submit">
+        <button class="loupe-index" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #7f7f7f;"></i>
         </button>
     <% end %>
