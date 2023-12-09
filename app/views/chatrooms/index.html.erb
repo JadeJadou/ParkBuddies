@@ -1,7 +1,10 @@
 <div id="circle-green-petit">
 <br>
 <div class="container mt-3 text-center">
+    <div class="logo-profile">
       <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702043722/BP_Logos/Logo_3_svg_transp/PB_Logo_Name_Inline_pink_rj8uwh.svg", width: 300, height: 100) %>
+    </div>
+      <br>
       <br>
     <%= form_with url: chatrooms_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
@@ -9,7 +12,7 @@
             class: "input",
             placeholder: "Chercher une discussion"
         %>
-        <button class="loupe" type="submit">
+        <button class="loupe-index" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #7f7f7f;"></i>
         </button>
     <% end %>
