@@ -1,0 +1,7 @@
+<div class="message-opacity" id="message-<%= private_message.id %>">
+  <small class="text-end">
+    <strong><%= private_message.user.nickname %></strong>
+    <i><%= private_message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
+  </small>
+  <p><%= private_message.content %></p>
+</div>
