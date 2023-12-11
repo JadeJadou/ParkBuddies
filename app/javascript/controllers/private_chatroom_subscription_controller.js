@@ -10,25 +10,25 @@ export default class extends Controller {
     this.channel = createConsumer().subscriptions.create(
       { channel: "PrivateChatroomChannel", id: this.chatroomIdValue },
       { received: data =>
-        {console.log(data)
         this.insertPrivateMessageAndScrollDown(data)
-        }
       }
     )
-    document.addEventListener('DOMContentLoaded', () => {
-      this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight);
-    });
-    //  ça ne fonctionne pas pour le moment
+    setTimeout(() => {
+      this.scrollMessagesToBottom();
+    }, 100);
   }
 
   insertPrivateMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.private_message)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
-    console.log(this.messagesTarget.scrollHeight);
+    this.scrollMessagesToBottom();
   }
 
+  scrollMessagesToBottom() {
+    this.messagesTarget.scrollTop = this.messagesTarget.scrollHeight;
+  }
+  
   resetForm(event) {
     event.target.reset()
   }
