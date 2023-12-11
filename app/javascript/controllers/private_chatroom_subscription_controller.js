@@ -15,6 +15,10 @@ export default class extends Controller {
         }
       }
     )
+    document.addEventListener('DOMContentLoaded', () => {
+      this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight);
+    });
+    //  ça ne fonctionne pas pour le moment
   }
 
   insertPrivateMessageAndScrollDown(data) {
