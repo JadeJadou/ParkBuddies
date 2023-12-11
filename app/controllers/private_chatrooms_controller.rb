@@ -9,21 +9,13 @@ class PrivateChatroomsController < ApplicationController
   end
 
   def show
-    @private_chatroom = PrivateChatroom.find(params[:id])
+    @buddy = User.find(params[:buddy_id])
+    @private_chatroom = PrivateChatroom.find_or_create_by(user_1: current_user, user_2: @buddy) do |chatroom|
+      chatroom.user_1 = current_user
+      chatroom.user_2 = @buddy
+    end
     @private_message = PrivateMessage.new
     @private_messages = @private_chatroom.private_messages
-    @other_user = @private_chatroom.users.where.not(id: current_user.id)
-  end
-
-  def create
-    other_user = User.find(params[:user_id])
-    @private_chatroom = PrivateChatroom.new
-    @private_chatroom.users << current_user
-    @private_chatroom.users << other_user
-    if @private_chatroom.save
-      redirect_to private_chatroom_path(@private_chatroom)
-    else
-      redirect_to private_chatrooms_path
-    end
+    @other_user = @buddy
   end
 end

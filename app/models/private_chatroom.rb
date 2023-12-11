@@ -1,6 +1,8 @@
 class PrivateChatroom < ApplicationRecord
   has_many :private_messages, dependent: :destroy
-  has_many :users
+  
+  belongs_to :user_1, class_name: "User"
+  belongs_to :user_2, class_name: "User"
 
   validates :name, presence: true, uniqueness: true
   validates :user_1, presence: true

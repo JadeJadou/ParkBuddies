@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   # root "posts#index"
   # methods edit et update à revoir !!!
   resources :users, only: [:show]
-  resources :private_chatrooms, only: [:index, :show] do
+  get "buddies/:id", to: "users#buddy", as: :buddy
+  resources :private_chatrooms, only: [:index] do
     resources :private_messages, only: [:create]
+  end
+  resource :private_chatrooms, only: [] do
+    member do
+      get ":buddy_id", to: "private_chatrooms#show", as: :show
+    end
   end
   resources :parks, only: [:index, :show] do
     resources :favorites, only: [:create]
