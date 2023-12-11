@@ -85,7 +85,7 @@ GEM
       tzinfo (~> 2.0)
     acts_as_favoritor (6.0.1)
       activerecord (>= 5.0)
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
@@ -109,6 +109,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    carrierwave (0.4.10)
     cloudinary (1.28.0)
       aws_cf_signer
       rest-client (>= 2.0.0)
@@ -116,9 +117,9 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
-    debug (1.8.0)
-      irb (>= 1.5.0)
-      reline (>= 0.3.1)
+    debug (1.9.0)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     devise (4.9.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -132,7 +133,7 @@ GEM
       railties (>= 3.2)
     drb (2.2.0)
       ruby2_keywords
-    error_highlight (0.5.1)
+    error_highlight (0.6.0)
     erubi (1.12.0)
     execjs (2.9.1)
     ffi (1.16.3)
@@ -151,7 +152,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.6.0)
-    irb (1.10.0)
+    irb (1.10.1)
       rdoc
       reline (>= 0.3.8)
     jbuilder (2.11.5)
@@ -169,7 +170,8 @@ GEM
     matrix (0.4.2)
     mime-types (3.5.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2023.1003)
+    mime-types-data (3.2023.1205)
+    mini_magick (4.12.0)
     mini_mime (1.1.5)
     minitest (5.20.0)
     msgpack (1.7.2)
@@ -185,13 +187,7 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.0)
-    nokogiri (1.15.5-aarch64-linux)
-      racc (~> 1.4)
     nokogiri (1.15.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.15.5-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.5.4)
@@ -240,10 +236,10 @@ GEM
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
     rake (13.1.0)
-    rdoc (6.6.0)
+    rdoc (6.6.1)
       psych (>= 4.0.0)
     redis (4.8.1)
-    regexp_parser (2.8.2)
+    regexp_parser (2.8.3)
     reline (0.4.1)
       io-console (~> 0.5)
     responders (3.1.1)
@@ -265,7 +261,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (4.15.0)
+    selenium-webdriver (4.16.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
@@ -305,11 +301,7 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  aarch64-linux
   arm64-darwin-22
-  arm64-darwin-23
-  x86_64-darwin-23
-  x86_64-linux
 
 DEPENDENCIES
   acts_as_favoritor
@@ -317,6 +309,7 @@ DEPENDENCIES
   bootsnap
   bootstrap (~> 5.2)
   capybara
+  carrierwave (~> 0.4.10)
   cloudinary
   debug
   devise
@@ -326,6 +319,7 @@ DEPENDENCIES
   geocoder
   importmap-rails
   jbuilder
+  mini_magick
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.2)
