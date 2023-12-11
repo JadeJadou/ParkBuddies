@@ -9,11 +9,15 @@
 
   <div class="messages" data-private-chatroom-subscription-target="messages">
     <div class="container text-center">
-      <p><strong> Bienvenue dans la discussion "<%= @other_user.name %>" </strong></p>
+      <p><strong> Bienvenue dans la discussion avec "<%= @other_user.nickname %>" </strong></p>
     </div>
 
     <% @private_chatroom.private_messages.each do |message| %>
       <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+       <% if message.user.avatar %>
+
+        <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar') %>
+      <% end %>
         <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
          <%= render "private_messages/private_message", private_message: message%>
         </div>
@@ -28,7 +32,7 @@
       html: { data: { action: "turbo:submit-end->private-chatroom-subscription#resetForm" },
       class: "d-flex" }  do |f| %>
       <%=f.text_area :content, as: :text, label: false, size: 3, class: "custom-text-field",
-      placeholder: "Ecrire un message @#{@other_user.name}", class:"input2"%>
+      placeholder: "Ecrire un message @#{@other_user.nickname}", class:"input2"%>
       <button class="plane" type="submit">
         <i class="fa-solid fa-paper-plane fa-xl"></i>
       </button>

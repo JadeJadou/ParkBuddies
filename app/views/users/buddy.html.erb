@@ -1,0 +1,51 @@
+<div id="circle-green">
+  <br>
+  <div class="container mt-3 text-center">
+  <div class="logo-profile">
+    <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702043722/BP_Logos/Logo_3_svg_transp/PB_Logo_Name_Inline_pink_rj8uwh.svg", width: 300, height: 100) %>
+  </div>
+  </div>
+  <% if @buddy.avatar.present? %>
+  <%= image_tag("avatars/#{@buddy.avatar}", alt: "Avatar", class:"avatar-centered") %>
+<% end %>
+
+</div>
+  <div class="container">
+    <div class="row">
+        <div class="center mt-5">
+          <h2><strong><%= @buddy.nickname %></strong></h2>
+        </div>
+    </div>
+  </div>
+
+
+  <ul class="nav justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button style="margin-right: 105px;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PROFIL</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">PARCS FAVORIS</button>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <div class="fond-gray pt-4 pb-5 ">
+        <div class="container card-simple">
+          <p><strong style="color:#F28482">A propos de vous : </strong><%= @buddy.description %></p>
+          <p><i class="fa-solid fa-city p-2" style="color: #f28482;"></i><%= @buddy.address %></p>
+          <p><strong style="color:#F28482">Vos enfants ont : </strong> <%= @buddy.kids_average_age %></p>
+        </div>
+        <br>
+        <div class="container">
+        <%= link_to "Discuter", show_private_chatrooms_path(buddy_id: @buddy.id), class: "btn-large" %>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="fond-gray pt-4 pb-5">
+    ...
+    </div>
+  </div>
+
+</div>

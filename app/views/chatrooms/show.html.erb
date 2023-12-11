@@ -15,7 +15,9 @@
     <% @chatroom.messages.each do |message| %>
       <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
       <% if message.user.avatar %>
-        <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar') %>
+        <%= link_to buddy_path(message.user) do %>
+          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar') %>
+        <% end %>
       <% end %>
         <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
           <%= render "messages/message", message: message %>
