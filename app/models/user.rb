@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :chatrooms, through: :messages
   has_many :favorites
   has_many :parks, through: :favorites
+  has_many :private_chatrooms
+  has_many :private_messages
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :nickname, presence: true, uniqueness: true
