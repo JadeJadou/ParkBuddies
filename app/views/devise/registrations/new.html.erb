@@ -1,7 +1,7 @@
 <div class="container" data-controller="signup-form">
 <h2>Crées ton compte </h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :post, multipart: true }) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
@@ -54,8 +54,22 @@
     <%= f.input :kids_average_age,
                 as: :hidden,
                 input_html:{data: {signup_form_target: "hiddenInput"}}%>
-    <%#= f.input :avatar, as: :file, label: 'Choisis un avatar' %>
-    
+    <%# <%= f.input :avatar,
+                label: 'Choisis un avatar',
+                collection: User::AVATAR_CHOICES,
+                as: :radio_buttons,
+                item_wrapper_class: 'avatar-image',
+                image_tag: "avatars/#{@avatar}", class: 'avatar' %>
+
+  </div>
+
+  <div class="avatar-options">
+    <% User::AVATAR_CHOICES.each do |avatar| %>
+      <label class="avatar-option">
+        <%= f.radio_button :avatar, avatar %>
+        <%= image_tag("avatars/#{avatar}", class: 'avatar') %>
+      </label>
+    <% end %>
   </div>
 
   <div class="form-actions">

@@ -57,6 +57,7 @@
                   hint: "Explique-nous pourquoi tu es inscrit(e) sur ParkBuddies",
                   input_html: { class: "custom-text-field" }
                   %>
+       <%= f.input :avatar, as: :select, collection: User::AVATAR_CHOICES, label: 'Choisis un avatar' %>
     </div>
 
     <div class="form-actions">
