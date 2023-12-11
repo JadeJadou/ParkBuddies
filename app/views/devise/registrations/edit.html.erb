@@ -57,8 +57,16 @@
                   hint: "Explique-nous pourquoi tu es inscrit(e) sur ParkBuddies",
                   input_html: { class: "custom-text-field" }
                   %>
-       <%= f.input :avatar, as: :select, collection: User::AVATAR_CHOICES, label: 'Choisis un avatar' %>
     </div>
+
+  <div class="avatar-options">
+    <% User::AVATAR_CHOICES.each do |avatar| %>
+      <label class="avatar-option">
+        <%= f.radio_button :avatar, avatar %>
+        <%= image_tag("avatars/#{avatar}", class: 'avatar') %>
+      </label>
+    <% end %>
+  </div>
 
     <div class="form-actions">
       <div class="container mt-3 text-center">
