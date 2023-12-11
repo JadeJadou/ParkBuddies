@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   # methods edit et update à revoir !!!
   resources :users, only: [:show]
+  resources :private_chatrooms, only: [:index, :show] do
+    resources :private_messages, only: [:create]
+  end
   resources :parks, only: [:index, :show] do
     resources :favorites, only: [:create]
   end
