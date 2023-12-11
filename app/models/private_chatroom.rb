@@ -1,0 +1,2 @@
+class PrivateChatroom < ApplicationRecord
+end
