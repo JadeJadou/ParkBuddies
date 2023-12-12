@@ -19,9 +19,11 @@ class ChatroomsController < ApplicationController
   end
 
   def show
-    @chatroom = Chatroom.find(params[:id])
-    @message = Message.new
+    @park = Park.find(params[:id])
+    @chatroom = Chatroom.find_or_create_by(park: @park)
+
     @messages = @chatroom.messages
+    @message = Message.new
   end
 
 end

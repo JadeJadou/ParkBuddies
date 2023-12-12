@@ -9,10 +9,13 @@ class PrivateChatroomsController < ApplicationController
 
   def show
     @buddy = User.find(params[:buddy_id])
-    @private_chatroom = PrivateChatroom.find_or_create_by(user_1: current_user, user_2: @buddy) do |chatroom|
-      chatroom.user_1 = current_user
-      chatroom.user_2 = @buddy
-      chatroom.name = "Discussion privée avec & #{@buddy.nickname}"
+    @private_chatroom = PrivateChatroom.find_by(user_1: @buddy, user_2: current_user)
+    if @private_chatroom.nil?
+      @private_chatroom = PrivateChatroom.find_or_create_by(user_1: current_user, user_2: @buddy) do |chatroom|
+        chatroom.user_1 = current_user
+        chatroom.user_2 = @buddy
+        chatroom.name = "#{current_user.nickname} & #{@buddy.nickname}"
+      end
     end
     @private_message = PrivateMessage.new
     @private_messages = @private_chatroom.private_messages

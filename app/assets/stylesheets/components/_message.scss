@@ -1,22 +1,29 @@
 .message-row {
+  display: flex;
   margin-bottom: 10px;
   padding: 8px;
+  justify-content: space-between;
 }
 
-// To style the message itself
-.sender-style, .receiver-style {
+.sender-style {
   width: 70%;
   max-width: 400px;
   border-radius: 6px;
   padding: 8px;
   min-height: 80px;
-}
-
-.sender-style {
   background-color: #D0F288;
 }
 
 .receiver-style {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 6px;
+  padding: 8px;
+  min-height: 80px;
   background-color: #F28482;
 }
-
+.avatar-message {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
