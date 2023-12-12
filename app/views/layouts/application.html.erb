@@ -13,6 +13,11 @@
   </head>
 
   <body>
+
+    <%= turbo_stream_from "notification" %>
+    <div class="notifications" id="notification_<%=current_user.id%>">
+      <%#= render "private_messages/private_message_notif", private_message: PrivateMessage.last%>
+    </div>
     <%= render "shared/flashes" %>
     <%= yield %>
     <%= render "shared/navbar" if current_user %>

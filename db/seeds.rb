@@ -11,6 +11,8 @@ require "open-uri"
 
 Message.destroy_all
 Favorite.destroy_all
+PrivateMessage.destroy_all
+PrivateChatroom.destroy_all
 User.destroy_all
 Chatroom.destroy_all
 Park.destroy_all
