@@ -1,4 +1,4 @@
-<div id="circle-green">
+<div id="circle-coral">
   <br>
   <div class="container mt-3 text-center">
   <div class="logo-profile">
@@ -24,7 +24,7 @@
       <button style="margin-right: 105px;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">PROFIL</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">PARCS FAVORIS</button>
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">AVIS</button>
     </li>
   </ul>
 
@@ -38,13 +38,16 @@
         </div>
         <br>
         <div class="container">
-        <%= link_to "Discuter", show_private_chatrooms_path(buddy_id: @buddy.id), class: "btn-large" %>
+        <%= link_to "Discuter", show_private_chatrooms_path(buddy_id: @buddy.id), class: "btn-large-corail" %>
         </div>
       </div>
     </div>
     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     <div class="fond-gray pt-4 pb-5">
-    ...
+      <div class="container card-simple">
+        <p><strong style="font-size:18px">Laisser un avis sur :</strong> <%=@buddy.nickname  %> <br>
+
+      </div>
     </div>
   </div>
 
