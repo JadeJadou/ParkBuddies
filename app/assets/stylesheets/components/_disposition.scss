@@ -27,6 +27,13 @@
 .logo-profile {
   position: absolute;
   margin-left: 55px;
-  margin-top: -52px;
+  margin-top: -87px;
+  z-index: 1;
+}
+
+.logo-index {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: -68px;
   z-index: 1;
 }
