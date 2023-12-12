@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
   def buddy
     @buddy = User.find(params[:id])
+    @review = Review.new
+    @reviews = @buddy.reviews
+    @average = @reviews.average(:rating)
   end
-
 end
