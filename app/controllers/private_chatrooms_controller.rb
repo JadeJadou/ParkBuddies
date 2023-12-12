@@ -1,12 +1,11 @@
 class PrivateChatroomsController < ApplicationController
-
-  def index
-    @private_message = PrivateMessage.new
-    @private_chatroom = current_user.private_chatrooms
-    if params[:query].present?
-      @chatrooms = @chatrooms.where("name ILIKE ?", "%#{params[:query]}%")
-    end
-  end
+  # def index
+  #   @private_message = PrivateMessage.new
+  #   @private_chatroom = current_user.private_chatrooms
+  #   if params[:query].present?
+  #     @chatrooms = @chatrooms.where("name ILIKE ?", "%#{params[:query]}%")
+  #   end
+  # end
 
   def show
     @buddy = User.find(params[:buddy_id])
