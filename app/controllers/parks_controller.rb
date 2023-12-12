@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def index
-    @parks = Park.all
+    @parks = Park.all.order(:id)
 
     if params[:query].present?
       searchable_columns = %w[name address category]
