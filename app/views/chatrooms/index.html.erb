@@ -26,7 +26,7 @@
       <div class="card-chatroom">
         <% if last_message %>
         <div class="chatroom-infos">
-          <p><strong style="color:#F28482"><%= chatroom.name %></strong></p>
+          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
           <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
         </div>
         <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
@@ -50,13 +50,13 @@
       <div class="card-chatroom">
         <% if last_message %>
         <div class="chatroom-infos">
-          <p><strong style="color:#F28482"><%= chatroom.name %></strong></p>
+          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
           <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
         </div>
         <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
         <% else %>
         <div class="chatroom-infos">
-          <p><strong><%= chatroom.name %></strong></p>
+          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
           <p>No messages yet</p>
         </div>
         <% end %>

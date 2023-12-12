@@ -1,8 +1,8 @@
-.notifications {
-  position:fixed;
-  top:4px;
-  right: 12px;
-}
+// .notifications {
+//   position:fixed;
+//   top:4px;
+//   right: 12px;
+// }
 // .notification {
 //   background-color: rgba(255, 255, 255, 0.9);
 //   border-radius: 8px;
@@ -11,7 +11,7 @@
 //   text-align: left;
 // }
 
-// css internet
+
 .notification {
 	width: 360px;
 	padding: 15px;
@@ -21,12 +21,15 @@
 	top: 15px;
 	left: 15px;
 	transform: translateY(-100%);
-	animation: noti 5s ease-in-out;
+	animation: noti 5s ease-in-out forwards;
+  overflow: hidden;
+  z-index: 2;
+
 	&-header {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		margin-bottom: 15px;
+		justify-content: flex-end;
+		margin-bottom: -23px;
 	}
 	&-title {
 		font-size: 16px;
@@ -46,7 +49,7 @@
 	}
 	&-container {
 		display: flex;
-    align-items: flex-start;
+    align-items: center;
 	}
 	&-media {
 		    position: relative;
@@ -100,6 +103,7 @@ text-overflow: ellipsis;
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(-150%);
+
   }
 }
