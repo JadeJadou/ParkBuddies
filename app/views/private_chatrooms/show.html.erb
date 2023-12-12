@@ -12,27 +12,9 @@
       <p><strong> Bienvenue dans votre discussion avec "<%= @other_user.nickname %>" </strong></p>
     </div>
 
-  <% @private_chatroom.private_messages.each do |message| %>
+  <% @private_chatroom.private_messages.each do |message, avatar| %>
   <div class="message-row">
-    <% if message.sender?(current_user) %>
-      <div class="avatar-message">
-        <%= link_to buddy_path(message.user) do %>
-          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
-        <% end %>
-      </div>
-      <div class="message-content sender-style">
-        <%= render "private_messages/private_message", private_message: message %>
-      </div>
-    <% else %>
-      <div class="message-content receiver-style">
-        <%= render "private_messages/private_message", private_message: message %>
-      </div>
-      <div class="avatar-message">
-        <%= link_to buddy_path(message.user) do %>
-          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
-        <% end %>
-      </div>
-    <% end %>
+  <%= render "messages/message", message: message, avatar: avatar%>
   </div>
 <% end %>
 

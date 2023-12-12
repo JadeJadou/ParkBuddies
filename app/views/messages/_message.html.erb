@@ -1,6 +1,6 @@
 <% if message.sender?(current_user) %>
   <div class="avatar-message">
-    <%= render "avatars/avatar", message: message, avatar: avatar%>
+    <%= render "avatars/avatar", message: message%>
         </div>
         <div class="message-content sender-style">
           <div class="message-opacity" id="message-<%= message.id %>">
@@ -19,8 +19,7 @@
     </small>
       <p><%= message.content %></p>
   </div>
-  </div>
   <div class="avatar-message">
-  <%= render "avatars/avatar", avatar: avatar %>
+  <%= render "avatars/avatar", message: message, avatar: avatar %>
   </div>
 <% end %>

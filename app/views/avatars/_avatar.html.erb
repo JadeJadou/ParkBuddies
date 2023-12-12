@@ -1,0 +1,5 @@
+<div class="avatar-message">
+  <%= link_to buddy_path(message.user) do %>
+    <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
+  <% end %>
+</div>
