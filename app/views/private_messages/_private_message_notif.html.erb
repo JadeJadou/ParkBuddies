@@ -9,15 +9,12 @@
       <div class="notification-avatar">
         <%= image_tag("avatars/#{private_message.user.avatar}", class: 'notification-user-avatar') %>
       </div>
-		  <div class="notification-content">
-
+		    <div class="notification-content">
           <strong><%= private_message.user.nickname %></strong>
           <i><%= private_message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
-
           <p class="notification-text"><%= private_message.content %></p>
+        </div>
       </div>
     </div>
-
-      </div>
-    </div>
+  </div>
 <% end %>
