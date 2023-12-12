@@ -3,7 +3,7 @@
 <div style="min-height: 620px">
   <div class="container mt-3 text-center">
     <div class="logo-profile">
-      <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702043722/BP_Logos/Logo_3_svg_transp/PB_Logo_Name_Inline_pink_rj8uwh.svg", width: 300, height: 100) %>
+      <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702381580/BP_Logos/Logos_DEF_SVG_TRANSP/PB_Logo_Name_Inline_pink_n1bdgg.svg", width: 300, height: 100) %>
     </div>
       <br>
       <br>
@@ -40,6 +40,31 @@
     <% end %>
   <% end %>
 <% else %>
-  <p>No chatrooms found</p>
+  <p>Vous n'avez pas encore de chatroom pour Parc</p>
 <% end %>
+<%# début private_chatroom %>
+<% if @private_chatrooms.present? && @private_chatrooms.any? %>
+  <% @private_chatrooms.distinct.each do |chatroom| %>
+    <% last_message = chatroom.private_messages.last %>
+    <%= link_to show_private_chatrooms_path(chatroom.user_2), class: "text-decoration-none", style: "color: inherit" do %>
+      <div class="card-chatroom">
+        <% if last_message %>
+        <div class="chatroom-infos">
+          <p><strong style="color:#F28482"><%= chatroom.name %></strong></p>
+          <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+        </div>
+        <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+        <% else %>
+        <div class="chatroom-infos">
+          <p><strong><%= chatroom.name %></strong></p>
+          <p>No messages yet</p>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <p>Vous n'avez pas encore de chatroom Privé</p>
+<% end %>
+<%# fin private_chatroom %>
 </div>

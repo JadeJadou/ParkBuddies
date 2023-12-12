@@ -1,7 +1,7 @@
 <div id="circle-green">
 <br>
   <div class="container mt-3 text-center">
-       <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702043722/BP_Logos/Logo_3_svg_transp/PB_Logo_Name_Inline_pink_rj8uwh.svg", width: 300, height: 100) %>
+      <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702381580/BP_Logos/Logos_DEF_SVG_TRANSP/PB_Logo_Name_Inline_pink_n1bdgg.svg", width: 500, height: 300) %>
   </div>
 <div class="container chatroom mt-50" data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
@@ -9,17 +9,32 @@
 
   <div class="messages" data-chatroom-subscription-target="messages"%>
     <div class="container text-center">
-      <p><strong> Bienvenue dans la discussion "<%= @chatroom.name %>" </strong></p>
+      <p><strong> Bienvenue dans la discussion "<%= @chatroom.park.name %>" </strong></p>
     </div>
 
-    <% @chatroom.messages.each do |message| %>
-      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-          <%= render "messages/message", message: message %>
-        </div>
+<% @chatroom.messages.each do |message| %>
+  <div class="message-row">
+    <% if message.sender?(current_user) %>
+      <div class="avatar-message">
+        <%= link_to buddy_path(message.user) do %>
+          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
+        <% end %>
+      </div>
+      <div class="message-content sender-style">
+        <%= render "messages/message", message: message %>
+      </div>
+    <% else %>
+      <div class="message-content receiver-style">
+        <%= render "messages/message", message: message %>
+      </div>
+      <div class="avatar-message">
+        <%= link_to buddy_path(message.user) do %>
+          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
+        <% end %>
       </div>
     <% end %>
   </div>
+<% end %>
 
   <div class="message-form">
     <%= simple_form_for [@chatroom, @message],

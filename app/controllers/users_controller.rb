@@ -3,4 +3,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def buddy
+    @buddy = User.find(params[:id])
+  end
+
 end

@@ -11,6 +11,8 @@ require "open-uri"
 
 Message.destroy_all
 Favorite.destroy_all
+PrivateMessage.destroy_all
+PrivateChatroom.destroy_all
 User.destroy_all
 Chatroom.destroy_all
 Park.destroy_all
@@ -18,18 +20,18 @@ Park.destroy_all
 puts "Creating users"
 
 #Lausanne
-user1 = User.create!(first_name: "John", last_name: "Lenon",  nickname:"Zigoto", address:"Lausanne", kids_average_age:"3", kids_count:"2", email: "john@email.com", password: "123456", avatar:"", description: "Je suis un père qui adore emmener mes deux enfants au parc. Nous passons des moments incroyables ensemble, mais je trouve ça un peu dommage de ne pas avoir l’occasion de rencontrer d’autres parents avec qui partager ces instants.")
-user2 = User.create!(first_name: "Olivier",last_name: "Leroy", nickname:"OliveLsne", address:"Lausanne", kids_average_age:"7", kids_count:"3", email: "olivier@email.com", password: "azerty", avatar:"", description: "Je m’appelle OliveLsne, et chaque sortie au parc avec mes deux enfants est un moment de bonheur. Cependant, je ressens une pointe de regret de ne pas pouvoir échanger avec d’autres parents lors de ces moments précieux.")
-user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"DMArc", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"", description: "Je suis DMArc, et chaque visite au parc avec mes deux enfants est un pur plaisir. Nous jouons et rions ensemble, mais j’avoue que j’aimerais parfois pouvoir discuter avec d’autres parents pendant que les enfants s’amusent.")
-user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Paul-Nord", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"", description: "Je m’appelle Paul-Nord, et j’adore emmener mes deux enfants au parc pour profiter de la nature et des jeux. J’aimerais aussi saisir l’occasion de rencontrer d’autres parents, pour échanger des expériences et créer des liens d’amitié.")
+user1 = User.create!(first_name: "John", last_name: "Lenon",  nickname:"Zigoto", address:"Lausanne", kids_average_age:"3", kids_count:"2", email: "john@email.com", password: "123456", avatar:"AV_chicken_black_green.png", description: "Je suis un père qui adore emmener mes deux enfants au parc. Nous passons des moments incroyables ensemble, mais je trouve ça un peu dommage de ne pas avoir l’occasion de rencontrer d’autres parents avec qui partager ces instants.")
+user2 = User.create!(first_name: "Olivier",last_name: "Leroy", nickname:"OliveLsne", address:"Lausanne", kids_average_age:"7", kids_count:"3", email: "olivier@email.com", password: "azerty", avatar:"AV_fish_purple.png", description: "Je m’appelle OliveLsne, et chaque sortie au parc avec mes deux enfants est un moment de bonheur. Cependant, je ressens une pointe de regret de ne pas pouvoir échanger avec d’autres parents lors de ces moments précieux.")
+user3 = User.create!(first_name: "Marc",last_name: "Dupuis", nickname:"DMArc", address:"Lausanne", kids_average_age:"9", kids_count:"1", email: "user3@email.com", password: "azerty3", avatar:"AV_sheep_yellow.png", description: "Je suis DMArc, et chaque visite au parc avec mes deux enfants est un pur plaisir. Nous jouons et rions ensemble, mais j’avoue que j’aimerais parfois pouvoir discuter avec d’autres parents pendant que les enfants s’amusent.")
+user4 = User.create!(first_name: "Paul",last_name: "Dupont", nickname:"Paul-Nord", address:"Lausanne", kids_average_age:"5", kids_count:"4", email: "user4@email.com", password: "azerty4", avatar:"AV_sloth_black.png", description: "Je m’appelle Paul-Nord, et j’adore emmener mes deux enfants au parc pour profiter de la nature et des jeux. J’aimerais aussi saisir l’occasion de rencontrer d’autres parents, pour échanger des expériences et créer des liens d’amitié.")
 #Geneve
-user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"JusdeFruits", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"", description: "Je m’appelle JusdeFruits, et je chéris les moments passés au parc avec mes deux enfants. C’est toujours une aventure, mais parfois, je souhaite qu’il y ait plus d’opportunités pour moi de rencontrer et de se lier d’amitié avec d’autres parents.")
-user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Marigold", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"", description: "Je m’appelle Marigold, et je trouve que les sorties au parc avec mes deux enfants sont des instants magiques. J’aspire à rencontrer d’autres parents lors de ces escapades, pour partager des conseils, des histoires et enrichir notre expérience familiale.")
-user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Piercing", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"", description: "")
+user5 = User.create!(first_name: "Julie",last_name: "Desbois", nickname:"JusdeFruits", address:"Geneve", kids_average_age:"3", kids_count:"3", email: "user5@email.com", password: "azerty5", avatar:"AV_frog_green.png", description: "Je m’appelle JusdeFruits, et je chéris les moments passés au parc avec mes deux enfants. C’est toujours une aventure, mais parfois, je souhaite qu’il y ait plus d’opportunités pour moi de rencontrer et de se lier d’amitié avec d’autres parents.")
+user6 = User.create!(first_name: "Marie",last_name: "Leclerc", nickname:"Marigold", address:"Geneve", kids_average_age:"5", kids_count:"2", email: "user6@email.com", password: "azerty6", avatar:"AV_kangaroo_black_coral.png", description: "Je m’appelle Marigold, et je trouve que les sorties au parc avec mes deux enfants sont des instants magiques. J’aspire à rencontrer d’autres parents lors de ces escapades, pour partager des conseils, des histoires et enrichir notre expérience familiale.")
+user7 = User.create!(first_name: "Pierre",last_name: "Lefevre", nickname:"Piercing", address:"Geneve", kids_average_age:"6", kids_count:"1", email: "user7@email.com", password: "azerty7", avatar:"AV_pinguin_black.png", description: "J'aimerais apprécier le temps passé au parc autant que mes enfants.")
 #Montreux
-user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Sophora", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"", description: "")
-user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Lucid", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"", description: "")
-user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Matrix", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"", description: "")
+user8 = User.create!(first_name: "Sophie",last_name: "Durand", nickname:"Sophora", address:"Montreux", kids_average_age:"2", kids_count:"1", email: "user8@email.com", password: "azerty8", avatar:"AV_toucan_green.png", description: "J'adore discuter avec d'autres parents, mais je ne sais pas comment m'y prendre...cela pourrait être plus facile si je pouvais les rencontrer au parc!")
+user9 = User.create!(first_name: "Lucas",last_name: "Roux", nickname:"Lucid", address:"Montreux", kids_average_age:"4", kids_count:"2", email: "user9@email.com", password: "azerty9", avatar:"AV_frog_yellow.png", description: "Il me semble que les parents sont plus ouverts à la discussion lorsqu'ils sont au parc avec leurs enfants. J'aimerais pouvoir en profiter pour rencontrer d'autres parents et échanger avec eux.")
+user10 = User.create!(first_name: "Martin",last_name: "Moreau", nickname:"Matrix", address:"Monteux", kids_average_age:"8", kids_count:"4", email: "user10@email.com", password: "azerty10", avatar:"AV_sheep_purple.png", description: "Les enfants sont une source de joie et de bonheur, mais j'aimerais pouvoir discuter avec d'autres parents lors de nos sorties au parc.")
 
 puts "Creating parks"
 
@@ -758,82 +760,3 @@ park33.save
 park34.save
 park35.save
 park36.save
-
-  puts "Creating chatrooms"
-
-chatroom1 = Chatroom.new(name: "Parc de Milan", park_id: park1.id)
-chatroom2 = Chatroom.new(name: "Parc de Mon Repos", park_id: park2.id)
-chatroom3 = Chatroom.new(name: "Parc de Rhodanie", park_id: park3.id)
-chatroom4 = Chatroom.new(name: "Parc de Sauvabelin", park_id: park4.id)
-chatroom5 = Chatroom.new(name: "Parc de Chandieu", park_id: park5.id)
-chatroom6 = Chatroom.new(name: "Parc des Bastions", park_id: park6.id)
-chatroom7 = Chatroom.new(name: "Parc de la Grange", park_id: park7.id)
-chatroom8 = Chatroom.new(name: "Parc des Eaux-Vives", park_id: park8.id)
-chatroom9 = Chatroom.new(name: "Parc de la Perle du Lac", park_id: park9.id)
-chatroom10 = Chatroom.new(name: "Parc des Franchises", park_id: park10.id)
-chatroom11 = Chatroom.new(name: "Parc des Cropettes", park_id: park11.id)
-chatroom12 = Chatroom.new(name: "Parc Vernex", park_id: park12.id)
-chatroom13 = Chatroom.new(name: "Parc de la Rouvenaz", park_id: park13.id)
-chatroom14 = Chatroom.new(name: "Le Parc Donner", park_id: park14.id)
-chatroom15 = Chatroom.new(name: "Parc de Mangettes", park_id: park15.id)
-chatroom16 = Chatroom.new(name: "Parc du Boiron", park_id: park16.id)
-chatroom17 = Chatroom.new(name: "Parc de Bois-Fleuri", park_id: park17.id)
-chatroom18 = Chatroom.new(name: "Parc de la Morâche", park_id: park18.id)
-chatroom19 = Chatroom.new(name: "Parc de Signal-de-Bougy", park_id: park19.id)
-chatroom20 = Chatroom.new(name: "Place de jeux du Chêne", park_id: park20.id)
-chatroom21 = Chatroom.new(name: "Parc de l'Indépendance", park_id: park21.id)
-chatroom22 = Chatroom.new(name: "Parc de Vertou", park_id: park22.id)
-chatroom23 = Chatroom.new(name: "Parc de Belleville", park_id: park23.id)
-chatroom24 = Chatroom.new(name: "Parc Chapelle-Charbon", park_id: park24.id)
-chatroom25 = Chatroom.new(name: "Parc de Clichy-Batignolles", park_id: park25.id)
-chatroom26 = Chatroom.new(name: "Parc André Citroën", park_id: park26.id)
-chatroom27 = Chatroom.new(name: "Parc Floral de Paris", park_id: park27.id)
-chatroom28 = Chatroom.new(name: "Le Jardin de Nelson Mandela", park_id: park28.id)
-chatroom29 = Chatroom.new(name: "Parc de la Tête d'Or", park_id: park29.id)
-chatroom30 = Chatroom.new(name: "Parc Blandan", park_id: park30.id)
-chatroom31 = Chatroom.new(name: "Parc des Jardins de l'Europe", park_id: park31.id)
-chatroom32 = Chatroom.new(name: "Parc Le Pâquier", park_id: park32.id)
-chatroom33 = Chatroom.new(name: "Square de l'Evêché", park_id: park36.id)
-chatroom34 = Chatroom.new(name: "Parc du Thabor", park_id: park33.id)
-chatroom35 = Chatroom.new(name: "Parc des Tanneurs", park_id: park34.id)
-chatroom36 = Chatroom.new(name: "Parc Oberthür", park_id: park35.id)
-
-
-  puts "Saving chatrooms"
-
-chatroom1.save
-chatroom2.save
-chatroom3.save
-chatroom4.save
-chatroom5.save
-chatroom6.save
-chatroom7.save
-chatroom8.save
-chatroom9.save
-chatroom10.save
-chatroom11.save
-chatroom12.save
-chatroom13.save
-chatroom14.save
-chatroom15.save
-chatroom16.save
-chatroom17.save
-chatroom18.save
-chatroom19.save
-chatroom20.save
-chatroom21.save
-chatroom22.save
-chatroom23.save
-chatroom24.save
-chatroom25.save
-chatroom26.save
-chatroom27.save
-chatroom28.save
-chatroom29.save
-chatroom30.save
-chatroom31.save
-chatroom32.save
-chatroom33.save
-chatroom34.save
-chatroom35.save
-chatroom36.save

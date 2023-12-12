@@ -10,16 +10,24 @@ export default class extends Controller {
     this.channel = createConsumer().subscriptions.create(
       { channel: "ChatroomChannel", id: this.chatroomIdValue },
       { received: data =>
-        this.insertMessageAndScrollDown(data)
+        this.insertMessageAndScrollDown(data),
       }
     )
+    setTimeout(() => {
+    this.scrollMessagesToBottom();
+  }, 100);
   }
+
 
   insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
-    this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+    this.messagesTarget.insertAdjacentHTML("beforeend", messageElement),
+    this.scrollMessagesToBottom();
+  }
+
+  scrollMessagesToBottom() {
+    this.messagesTarget.scrollTop = this.messagesTarget.scrollHeight;
   }
 
   resetForm(event) {
