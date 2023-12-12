@@ -24,11 +24,11 @@
     <h2><%= @park.name %></h2>
     <% if @favorite.persisted? %>
       <%= link_to @favorite, data: {turbo_method: :delete} do %>
-          <i class="fa-solid fa-heart fa-xl" style="color: #F28482;"></i>
+          <i class="fa-solid fa-heart fa-xl" style="color: #EF476F;"></i>
       <% end  %>
     <% else %>
       <%= link_to [@park, @favorite], data: {turbo_method: :post} do %>
-        <i class="fa-regular fa-heart fa-xl" style="color: #F28482;"></i>
+        <i class="fa-regular fa-heart fa-xl" style="color: #EF476F;"></i>
       <% end %>
     <% end %>
   </div>
