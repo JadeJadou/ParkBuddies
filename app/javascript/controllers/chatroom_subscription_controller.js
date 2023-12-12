@@ -22,6 +22,7 @@ export default class extends Controller {
   insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
+    // const avatarElement = this.#buildAvatarElement(currentUserIsSender, data.avatar)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement),
     this.scrollMessagesToBottom();
   }
@@ -43,6 +44,7 @@ export default class extends Controller {
       </div>
     `
   }
+
 
   #justifyClass(currentUserIsSender) {
     return currentUserIsSender ? "justify-content-end" : "justify-content-start"

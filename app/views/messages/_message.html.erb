@@ -1,7 +1,26 @@
-<div class="message-opacity" id="message-<%= message.id %>">
-  <small class="text-end">
-    <strong><%= message.user.nickname %></strong>
-    <i><%= message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
-  </small>
-  <p><%= message.content %></p>
-</div>
+<% if message.sender?(current_user) %>
+  <div class="avatar-message">
+    <%= render "avatars/avatar", message: message, avatar: avatar%>
+        </div>
+        <div class="message-content sender-style">
+          <div class="message-opacity" id="message-<%= message.id %>">
+            <small class="text-end">
+              <strong><%= message.user.nickname %></strong>
+              <i><%= message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
+            </small>
+            <p><%= message.content %></p>
+          </div>
+        </div>
+<% else %>
+  <div class="message-content receiver-style">
+    <small class="text-end">
+      <strong><%= message.user.nickname %></strong>
+      <i><%= message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
+    </small>
+      <p><%= message.content %></p>
+  </div>
+  </div>
+  <div class="avatar-message">
+  <%= render "avatars/avatar", avatar: avatar %>
+  </div>
+<% end %>
