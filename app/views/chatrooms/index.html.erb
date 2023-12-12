@@ -22,7 +22,7 @@
 <% if @chatrooms.any? %>
   <% @chatrooms.distinct.each do |chatroom| %>
     <% last_message = chatroom.messages.last %>
-    <%= link_to chatroom_path(chatroom), class: "text-decoration-none", style: "color: inherit" do %>
+    <%= link_to chatroom_path(chatroom_id: chatroom,id:chatroom), class: "text-decoration-none", style: "color: inherit" do %>
       <div class="card-chatroom">
         <% if last_message %>
         <div class="chatroom-infos">
