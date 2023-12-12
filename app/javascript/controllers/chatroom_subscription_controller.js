@@ -21,8 +21,7 @@ export default class extends Controller {
 
   insertMessageAndScrollDown(data) {
     const currentUserIsSender = this.currentUserIdValue === data.sender_id
-    const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
-    // const avatarElement = this.#buildAvatarElement(currentUserIsSender, data.avatar)
+    const messageElement = this.#buildMessageElement(currentUserIsSender, data.message, data.avatar)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement),
     this.scrollMessagesToBottom();
   }
@@ -35,22 +34,37 @@ export default class extends Controller {
     event.target.reset()
   }
 
-  #buildMessageElement(currentUserIsSender, message) {
+  #buildMessageElement(currentUserIsSender, message, avatar) {
+    if (currentUserIsSender) {
     return `
-      <div class="message-row d-flex ${this.#justifyClass(currentUserIsSender)}">
-        <div class="${this.#userStyleClass(currentUserIsSender)}">
-          ${message}
-        </div>
+    <div class="message-row">
+      <div class="avatar-message">
+            ${avatar}
       </div>
+      <div class="message-content sender-style">
+              ${message}
+      </div>
+    </div>
     `
   }
+else {
+  return `
+  <div class="message-row">
+    <div class="message-content receiver-style">
+            ${message}
+    </div>
+    <div class="avatar-message">
+          ${avatar}
+    </div>
+  </div>
+  `
+}}
 
+  // #justifyClass(currentUserIsSender) {
+  //   return currentUserIsSender ? "justify-content-end" : "justify-content-start"
+  // }
 
-  #justifyClass(currentUserIsSender) {
-    return currentUserIsSender ? "justify-content-end" : "justify-content-start"
-  }
-
-  #userStyleClass(currentUserIsSender) {
-    return currentUserIsSender ? "sender-style" : "receiver-style"
-  }
+  // #userStyleClass(currentUserIsSender) {
+  //   return currentUserIsSender ? "sender-style" : "receiver-style"
+  // }
 }

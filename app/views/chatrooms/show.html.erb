@@ -20,7 +20,8 @@
     <div class="message-row">
           <%= render "messages/message", message: message, avatar: avatar%>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 
   <div class="message-form">
     <%= simple_form_for [@chatroom, @message],
