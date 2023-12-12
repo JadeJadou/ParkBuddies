@@ -15,3 +15,20 @@
   border-bottom: 2px solid #BED754;
 }
 }
+#mybuddyTab{
+  color: black;
+  --bs-nav-link-color: black;
+  --bs-nav-link-hover-color:#EF476F;
+
+  border-bottom: 1px solid white;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+  .nav-link:hover, .nav-link:focus {
+    color: var(--bs-nav-link-hover-color);
+    border-bottom: 2px solid #EF476F;
+}
+.nav-link.active {
+  color: var(--bs-nav-link-hover-color);
+  border-bottom: 2px solid #EF476F;
+}
+}
