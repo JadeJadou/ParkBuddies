@@ -12,29 +12,11 @@
       <p><strong> Bienvenue dans la discussion "<%= @chatroom.park.name %>" </strong></p>
     </div>
 
-<% @chatroom.messages.each do |message| %>
-  <div class="message-row">
-    <% if message.sender?(current_user) %>
-      <div class="avatar-message">
-        <%= link_to buddy_path(message.user) do %>
-          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
-        <% end %>
-      </div>
-      <div class="message-content sender-style">
-        <%= render "messages/message", message: message %>
-      </div>
-    <% else %>
-      <div class="message-content receiver-style">
-        <%= render "messages/message", message: message %>
-      </div>
-      <div class="avatar-message">
-        <%= link_to buddy_path(message.user) do %>
-          <%= image_tag("avatars/#{message.user.avatar}", class: 'avatar-message') %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-<% end %>
+  <% @chatroom.messages.each do |message, avatar| %>
+    <div class="message-row">
+          <%= render "messages/message", message: message, avatar: avatar%>
+    </div>
+  <% end %>
 
   <div class="message-form">
     <%= simple_form_for [@chatroom, @message],

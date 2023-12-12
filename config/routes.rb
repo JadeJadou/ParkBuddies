@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   # methods edit et update à revoir !!!
-  resources :users, only: [:show]
+  resources :users, only: [:show] 
   get "buddies/:id", to: "users#buddy", as: :buddy
   resources :private_chatrooms, only: [:index] do
     resources :private_messages, only: [:create]
