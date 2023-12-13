@@ -9,7 +9,8 @@ class PrivateMessagesController < ApplicationController
         @private_chatroom,
         private_message: render_to_string(partial: "private_message",
       locals: {private_message: @private_message}),
-        sender_id: @private_message.user.id
+        sender_id: @private_message.user.id,
+        avatar: render_to_string(partial: "avatars/avatar", locals: {message: @private_message}),
       )
       head :ok
     else
