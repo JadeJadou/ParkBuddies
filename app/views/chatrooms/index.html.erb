@@ -7,6 +7,8 @@
     </div>
       <br>
       <br>
+      <br>
+      <br>
     <%= form_with url: chatrooms_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
@@ -25,47 +27,44 @@
     <%= link_to chatroom_path(chatroom_id: chatroom,id:chatroom), class: "text-decoration-none", style: "color: inherit" do %>
       <div class="card-chatroom">
         <% if last_message %>
-        <div class="chatroom-infos">
-          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-          <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
-        </div>
-        <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+          <div class="chatroom-infos">
+            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+            <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+          </div>
+          <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
         <% else %>
-        <div class="chatroom-infos">
-          <p><strong><%= chatroom.name %></strong></p>
-          <p>No messages yet</p>
-        </div>
+          <div class="chatroom-infos">
+            <p><strong><%= chatroom.name %></strong></p>
+            <p>No messages yet</p>
+          </div>
         <% end %>
       </div>
     <% end %>
   <% end %>
-<% else %>
-  <p>Vous n'avez pas encore de chatroom pour Parc</p>
-<% end %>
 <%# début private_chatroom %>
-<% if @private_chatrooms.present? && @private_chatrooms.any? %>
+<% elsif @private_chatrooms.present? && @private_chatrooms.any? %>
   <% @private_chatrooms.distinct.each do |chatroom| %>
     <% last_message = chatroom.private_messages.last %>
     <% recipient_user = chatroom.user_1 == current_user ? chatroom.user_2 : chatroom.user_1%>
     <%= link_to show_private_chatrooms_path(recipient_user), class: "text-decoration-none", style: "color: inherit" do %>
       <div class="card-chatroom">
         <% if last_message %>
-        <div class="chatroom-infos">
-          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-          <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
-        </div>
-        <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+          <div class="chatroom-infos">
+            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+            <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+          </div>
+          <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
         <% else %>
-        <div class="chatroom-infos">
-          <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-          <p>No messages yet</p>
-        </div>
+          <div class="chatroom-infos">
+            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+            <p>No messages yet</p>
+          </div>
         <% end %>
       </div>
     <% end %>
   <% end %>
 <% else %>
-  <p>Vous n'avez pas encore de chatroom Privé</p>
+  <p>Vous n'avez pas encore de message</p>
 <% end %>
 <%# fin private_chatroom %>
 </div>
