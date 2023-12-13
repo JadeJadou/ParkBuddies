@@ -20,15 +20,16 @@
 </div>
 
 <div class="container">
-  <div class="flex-between mt-4 mb-2">
+
+  <div class="flex-between mt-3 mb-2">
     <h2><%= @park.name %></h2>
     <% if @favorite.persisted? %>
       <%= link_to @favorite, data: {turbo_method: :delete} do %>
-          <i class="fa-solid fa-heart fa-xl" style="color: #EF476F;"></i>
+          <i class="fa-solid fa-heart fa-xl" style="color: #EF476F;margin-top:24px"></i>
       <% end  %>
     <% else %>
       <%= link_to [@park, @favorite], data: {turbo_method: :post} do %>
-        <i class="fa-regular fa-heart fa-xl" style="color: #EF476F;"></i>
+        <i class="fa-regular fa-heart fa-xl" style="color: #EF476F;margin-top:24px"></i>
       <% end %>
     <% end %>
   </div>
