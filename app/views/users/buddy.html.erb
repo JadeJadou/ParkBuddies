@@ -64,7 +64,7 @@
                 <div class="col-xs-4">
                 <p><strong style="font-size:18px"> Moyenne des avis sur : </strong> <%=@buddy.nickname %> <br>
                   <% if @buddy.reviews == [] %>
-                    <p> Cet utilisateur n'a pas encore d'avis</p>
+                    <p> Cet utilisateur n'a pas encore d'avis...</p>
                   <% else %>
                     <p><% @average.round.to_i.times do %>
                       <span> <%= image_tag("stars/star-full.svg", style: "width: 20px; height: 20px;")%> </span>
