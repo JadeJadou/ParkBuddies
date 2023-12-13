@@ -46,7 +46,8 @@
 <% if @private_chatrooms.present? && @private_chatrooms.any? %>
   <% @private_chatrooms.distinct.each do |chatroom| %>
     <% last_message = chatroom.private_messages.last %>
-    <%= link_to show_private_chatrooms_path(chatroom.user_2), class: "text-decoration-none", style: "color: inherit" do %>
+    <% recipient_user = chatroom.user_1 == current_user ? chatroom.user_2 : chatroom.user_1%>
+    <%= link_to show_private_chatrooms_path(recipient_user), class: "text-decoration-none", style: "color: inherit" do %>
       <div class="card-chatroom">
         <% if last_message %>
         <div class="chatroom-infos">
