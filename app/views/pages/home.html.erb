@@ -1,22 +1,25 @@
-  <div class="banner" style="background-image: url(https://images.unsplash.com/photo-1590509990541-edf999edee33?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
-    <div class="container">
-      <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702381579/BP_Logos/Logos_DEF_SVG_TRANSP/PB_Logo_Full_White_pv0b0a.svg", width: 300, height: 200, class:"logo-banner")%>
-      <br>
-      <div class="text-shadow">
-        <p>L'appli qui transforme les parcs  en terrains d'amitié</p>
-        <p><strong>Connectez, Rencontrez, Partagez</strong></p>
-      </div>
-      <br>
-      <div class="col-md-4 text-center">
-        <% if user_signed_in? %>
-          <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
-        <% else %>
-          <%= link_to "S'inscrire", new_user_registration_path, class:"btn-text-noir" %>
-          <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc" %>
-        <% end %>
+<div class="banner" style="background-image: url(https://images.unsplash.com/photo-1590509990541-edf999edee33?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+    <div class="transparency-circle">
+      <div class="container">
+        <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1702381579/BP_Logos/Logos_DEF_SVG_TRANSP/PB_Logo_Full_White_pv0b0a.svg", width: 300, height: 200, class:"logo-banner")%>
+        <br>
+        <div class="text-shadow text-center">
+          <p>L'appli qui transforme les parcs  en terrains d'amitié</p>
+          <p><strong>Connectez, Rencontrez, Partagez</strong></p>
+        </div>
+        <br>
+        <div class="col-md-4 text-center">
+          <% if user_signed_in? %>
+            <%= link_to "Voir les parcs", parks_path, class: "btn-vert-rond"%>
+          <% else %>
+            <%= link_to "S'inscrire", new_user_registration_path, class:"btn-text-noir" %>
+            <%= link_to "Se connecter", user_session_path, class:"btn-text-blanc" %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
+<br>
+<br>
   <div class="container">
   </div>
     <div class="container mt-3 text-center">
