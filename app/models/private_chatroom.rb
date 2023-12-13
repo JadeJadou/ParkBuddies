@@ -6,7 +6,7 @@ class PrivateChatroom < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :user_1, presence: true
   validates :user_2, presence: true
-# est-ce que cette méthode est utile ?  
+# est-ce que cette méthode est utile ?
   def other_user(current_user)
     if current_user == user_1
       user_2
@@ -14,4 +14,5 @@ class PrivateChatroom < ApplicationRecord
       user_1
     end
   end
+
 end
