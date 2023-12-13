@@ -17,12 +17,12 @@
     </div>
 
   <% @private_chatroom.private_messages.each do |message, avatar| %>
-  <div class="message-row">
-  <%= render "messages/message", message: message, avatar: avatar%>
+    <div class="message-row">
+    <%= render "messages/message", message: message, avatar: avatar%>
+    </div>
+    <% end %>
   </div>
-<% end %>
 
-  </div>
   <div class="message-form">
     <%= simple_form_for [@private_chatroom, @private_message],
       html: { data: { action: "turbo:submit-end->private-chatroom-subscription#resetForm" },
