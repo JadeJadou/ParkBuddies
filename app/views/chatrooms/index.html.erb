@@ -21,50 +21,78 @@
     <% end %>
   </div>
 
-<% if @chatrooms.any? %>
-  <% @chatrooms.distinct.each do |chatroom| %>
-    <% last_message = chatroom.messages.last %>
-    <%= link_to chatroom_path(chatroom_id: chatroom,id:chatroom), class: "text-decoration-none", style: "color: inherit" do %>
-      <div class="card-chatroom">
-        <% if last_message %>
-          <div class="chatroom-infos">
-            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-            <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
-          </div>
-          <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
-        <% else %>
-          <div class="chatroom-infos">
-            <p><strong><%= chatroom.name %></strong></p>
-            <p>No messages yet</p>
-          </div>
-        <% end %>
-      </div>
+<% if params[:query].present? %>
+  <%# Cas où une recherche est effectuée %>
+  <% if @chatrooms.any? %>
+    <% @chatrooms.distinct.each do |chatroom| %>
+      <% last_message = chatroom.messages.last %>
+      <%= link_to chatroom_path(chatroom_id: chatroom, id: chatroom), class: "text-decoration-none", style: "color: inherit" do %>
+        <div class="card-chatroom">
+          <% if last_message %>
+            <div class="chatroom-infos">
+              <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+              <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+            </div>
+            <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+          <% else %>
+            <div class="chatroom-infos">
+              <p><strong><%= chatroom.name %></strong></p>
+              <p>No messages yet</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-<%# début private_chatroom %>
-<% elsif @private_chatrooms.present? && @private_chatrooms.any? %>
-  <% @private_chatrooms.distinct.each do |chatroom| %>
-    <% last_message = chatroom.private_messages.last %>
-    <% recipient_user = chatroom.user_1 == current_user ? chatroom.user_2 : chatroom.user_1%>
-    <%= link_to show_private_chatrooms_path(recipient_user), class: "text-decoration-none", style: "color: inherit" do %>
-      <div class="card-chatroom">
-        <% if last_message %>
-          <div class="chatroom-infos">
-            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-            <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
-          </div>
-          <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
-        <% else %>
-          <div class="chatroom-infos">
-            <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
-            <p>No messages yet</p>
-          </div>
-        <% end %>
-      </div>
+  <% elsif @private_chatrooms.present? && @private_chatrooms.any? %>
+    <% @private_chatrooms.distinct.each do |chatroom| %>
+      <% last_message = chatroom.private_messages.last %>
+      <% recipient_user = chatroom.user_1 == current_user ? chatroom.user_2 : chatroom.user_1 %>
+      <%= link_to show_private_chatrooms_path(recipient_user), class: "text-decoration-none", style: "color: inherit" do %>
+        <div class="card-chatroom">
+          <% if last_message %>
+            <div class="chatroom-infos">
+              <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+              <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+            </div>
+            <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+          <% else %>
+            <div class="chatroom-infos">
+              <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+              <p>No messages yet</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
+  <% else %>
+    <p>Vous n'avez pas encore de message</p>
   <% end %>
 <% else %>
-  <p>Vous n'avez pas encore de message</p>
+  <%# Cas où aucune recherche n'est effectuée %>
+  <% @all_chatrooms = @chatrooms + @private_chatrooms %>
+  <% if @all_chatrooms.any? %>
+    <% @all_chatrooms.each do |chatroom| %>
+      <% last_message = chatroom.is_a?(PrivateChatroom) ? chatroom.private_messages.last : chatroom.messages.last %>
+      <%= link_to (chatroom.is_a?(PrivateChatroom) ? show_private_chatrooms_path(chatroom.user_2) : chatroom_path(chatroom_id: chatroom, id: chatroom)), class: "text-decoration-none", style: "color: inherit" do %>
+        <div class="card-chatroom">
+          <% if last_message %>
+            <div class="chatroom-infos">
+              <p><strong style="color:#EF476F"><%= chatroom.name %></strong></p>
+              <p><%= last_message.user.nickname %>: <%= last_message.content %></p>
+            </div>
+            <p class="timestamp", style="padding-right: 10px;"><%= last_message.created_at.in_time_zone('CET').strftime('%H:%M') %></p>
+          <% else %>
+            <div class="chatroom-infos">
+              <p><strong><%= chatroom.name %></strong></p>
+              <p>No messages yet</p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p>Vous n'avez pas encore de message</p>
+  <% end %>
 <% end %>
-<%# fin private_chatroom %>
+
 </div>
