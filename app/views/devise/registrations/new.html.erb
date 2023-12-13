@@ -63,9 +63,10 @@
   </div>
 
   <div class="avatar-options">
+    <p>Choisis ton avatar ici</p>
     <% User::AVATAR_CHOICES.each do |avatar| %>
       <label class="avatar-option">
-        <%= f.radio_button :avatar, avatar %>
+        <%= f.radio_button :avatar, avatar%>
         <%= image_tag("avatars/#{avatar}", class: 'avatar') %>
       </label>
     <% end %>
