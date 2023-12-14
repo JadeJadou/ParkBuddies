@@ -25,14 +25,17 @@
                 input_html: { autocomplete: "new-password", class: "custom-text-field" } %>
     <%= f.input :first_name,
                 :label => 'Prénom',
+                hint: "Ton prénom ne sera pas visible par les autres utilisateurs",
                 required: true,
                 input_html: { class: "custom-text-field" }%>
     <%= f.input :last_name,
                 :label => 'Nom',
+                hint: "Ton nom ne sera pas visible par les autres utilisateurs",
                 required: true,
                 input_html: { class: "custom-text-field" } %>
     <%= f.input :nickname,
                 :label => 'Pseudo',
+                hint: "Ton pseudo sera visible par les autres utilisateurs",
                 required: true,
                 input_html: { class: "custom-text-field" } %>
     <%= f.input :address,
@@ -51,6 +54,7 @@
                 input_html: { class: "custom-text-field" } %>
     <%= f.input :kids_average_age,
                 label:'Age des enfant(s)',
+                hint: "Une moyenne d'âge sera calculée",
                 as: :check_boxes,
                 collection: 1..10,
                 required: true,
