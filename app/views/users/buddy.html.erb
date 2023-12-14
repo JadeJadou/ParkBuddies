@@ -47,7 +47,7 @@
     <div class="fond-gray pt-4 pb-5">
       <div class="container card-simple">
         <div class="container mt-1">
-        <p><strong style="font-size:18px"> Donne ton avis sur : </strong> <%=@buddy.nickname %> <br>
+        <p><strong style="font-size:18px; color:#EF476F"> Donne ton avis sur : </strong> <%=@buddy.nickname %> <br>
         </div>
         <div class="container mt-1">
           <div class="row">
@@ -62,7 +62,7 @@
             <div class="container mt-3">
               <div class="row">
                 <div class="col-xs-4">
-                <p><strong style="font-size:18px"> Moyenne des avis sur : </strong> <%=@buddy.nickname %> <br>
+                <p><strong style="font-size:18px; color:#EF476F"> Moyenne des avis sur : </strong> <%=@buddy.nickname %> <br>
                   <% if @buddy.reviews == [] %>
                     <p> Cet utilisateur n'a pas encore d'avis...</p>
                   <% else %>
