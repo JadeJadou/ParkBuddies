@@ -5,16 +5,18 @@
     <div class="notification-header">
       <i class="fa fa-times notification-close"></i>
     </div>
-    <div class="notification-container">
-      <div class="notification-avatar">
-        <%= image_tag("avatars/#{private_message.user.avatar}", class: 'notification-user-avatar') %>
-      </div>
-		    <div class="notification-content">
-          <strong><%= private_message.user.nickname %></strong>
-          <i><%= private_message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
-          <p class="notification-text"><%= private_message.content %></p>
+    <%= link_to show_private_chatrooms_path(private_message.user), class: "notification-link" do %>
+      <div class="notification-container">
+        <div class="notification-avatar">
+          <%= image_tag("avatars/#{private_message.user.avatar}", class: 'notification-user-avatar') %>
         </div>
-      </div>
+          <div class="notification-content">
+            <strong><%= private_message.user.nickname %></strong>
+            <i><%= private_message.created_at.in_time_zone('CET').strftime('%H:%M') %></i>
+            <p class="notification-text"><%= private_message.content %></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>
