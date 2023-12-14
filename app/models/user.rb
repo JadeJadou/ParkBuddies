@@ -36,4 +36,8 @@ class User < ApplicationRecord
   validates :address, presence: true
   validates :kids_average_age, presence: true
   validates :kids_count, presence: true
+
+  def change_avatars
+    self.update(avatar: AVATAR_CHOICES.sample(4))
+  end
 end
