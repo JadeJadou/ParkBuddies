@@ -41,6 +41,12 @@
       </div>
     <% end %>
   <% end %>
+<% else %>
+  <br>
+  <br>
+  <p class="ms-3", style="color: #EF476F;">Tu n'as pas encore de conversation pour parc</p>
+  <br>
+  <br>
 <% end %>
 <%# début private_chatroom %>
 <% if @private_chatrooms.present? && @private_chatrooms.any? %>
@@ -65,7 +71,7 @@
     <% end %>
   <% end %>
 <% else %>
-  <p>Vous n'avez pas encore de message</p>
+  <p class="ms-3", style="color: #EF476F;">Tu n'as pas encore de message privé</p>
 <% end %>
 <%# fin private_chatroom %>
 

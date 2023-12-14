@@ -39,11 +39,10 @@
                 :label => 'Ville',
                 required: true,
                 input_html: { class: "custom-text-field" } %>
-    <%= f.input :description,
+    <%= f.input :description, as: :text,
                 :label => 'Description',
                 hint: "Explique nous pourquoi tu t'inscris sur ParkBuddies",
-                input_html: { class: "custom-text-field" }
-                %>
+                input_html: { class: "custom-text-field" }%>
     <%= f.input :kids_count,
                 :label => 'Nombre d\'enfant(s)',
                 as: :select,
