@@ -41,15 +41,16 @@ puts "Creating parks"
 park1 = Park.new(
   name: "Parc de Milan",
   address: "Pl. de Milan, 1007 Lausanne, Suisse",
+  city: "Lausanne",
   description: "Il est sans doute difficile de trouver un enfant lausannois qui ne connaisse pas la place de Milan et son exceptionnelle place de jeux. Mais impossible de limiter ce parc à son seul aspect ludique. La place de Milan et le crêt de Montriond sont aussi des témoins de l’histoire lausannoise.",
   category: "Grand",
-  sandbox: false,
+  sandbox: true,
   slide: true,
-  sling: false,
+  sling: true,
   water: true,
   climber: false,
   coffee: true,
-  zoo: true,
+  zoo: false,
   toys_rent: true,
   suitable_from_age: 1)
 
@@ -59,6 +60,7 @@ park1.photo.attach(io: file, filename: "Parc de Milan.jpg", content_type: "image
 park2 = Park.new(
   name: "Parc de Mon Repos",
   address: "Av. Mon-Repos, 1005 Lausanne, Suisse",
+  city: "Lausanne",
   description: "De tous les beaux parcs qui constituent le patrimoine végétal historique lausannois, Mon-Repos est sans doute le plus extraordinaire: exceptionnel par la diversité de ses éléments architecturaux (tour néogothique, cascade, temple néoclassique, orangerie, volières, etc.), il l'est aussi par la richesse de la documentation en notre possession et par l'harmonie de l'ensemble.",
   category: "Petit",
   sandbox: false,
@@ -77,6 +79,7 @@ park2.photo.attach(io: file, filename: "Parc de Mon Repos.jpg", content_type: "i
 park3 = Park.new(
   name: "Parc de Rhodanie",
   address: "1007 Lausanne, Suisse",
+  city: "Lausanne",
   description: "À l’écart de la circulation, protégée de l’avenue de Rhodanie par une lisière d’arbre, cette petite place se trouve dans le Parc de la Campagne Rhoner. Elle dispose de jeux en bois pour les petits, sur un revêtement synthétique.",
   category: "Moyen",
   sandbox: false,
@@ -95,6 +98,7 @@ park3.photo.attach(io: file, filename: "Parc de Rhodanie.jpg", content_type: "im
 park4 = Park.new(
   name: "Parc de Sauvabelin",
   address: "Chemin de la Chocolatière, 1018 Lausanne, Suisse",
+  city: "Lausanne",
   description: "C'est encore la ville, c'est déjà la campagne: de la Tour et du Signal de Sauvabelin, un superbe panorama s'offre à la vue du promeneur. Au-dessus, des forêts de chênes entourent le lac de Sauvabelin, au charme duquel s'ajoute l'attrait de son parc animalier ProSpecieRara. Chèvres, cochons laineux, canards, sangliers et plusieurs autres volatiles sont à observer, en liberté ou dans des enclos.
   Le Parc de Sauvabelin abrite également «La Pinte du Lac» qui propose une cuisine locale et régionale, ainsi que des mets au fromage.",
   category: "Grand",
@@ -114,8 +118,8 @@ park4.photo.attach(io: file, filename: "Parc de Sauvabelin.jpg", content_type: "
 park5 = Park.new(
   name: "Parc de Chandieu",
   address: "1006 Lausanne, Suisse",
+  city: "Lausanne",
   description: "Intégrée dans le préau du Collège de Chandieu et adossée à un talus boisé, cette place, reconnaissable à son sol en relief zébré de lignes blanches, offre de belles possibilités de course et de parcours en trottinette; elle comprend un trampoline intégré au sol, des balançoires, dont une balançoire-panier, des maisonnettes en bois installées dans une zone verte, une structure d’équilibre en bois et métal et un grand bac à sable avec jeux d’eau.
-
   Des arbres et des arbustes d’essences indigènes, plantés par les élèves, agrémentent le lieu. Bancs et tables de pique-nique font de cette place un agréable lieu de rencontre.",
   category: "Grand",
   sandbox: true,
@@ -136,6 +140,7 @@ park5.photo.attach(io: file, filename: "Parc de Chandieu.jpg", content_type: "im
 park6 = Park.new(
   name: "Parc des Bastions",
   address: "Prom. des Bastions 1, 1205 Genève, Suisse",
+  city: "Genève",
   description: "La place de jeux du parc des Bastions est située au cœur d’un parc historique, dans le quartier de Plainpalais. Composée notamment d’un «mur à jouer», elle offre de nombreuses occasions de jeux entre les tourelles, les ponts de cordes et les cabanes agrémentées de miroirs, de bouliers et de puzzles.",
   category: "Grand",
   sandbox: true,
@@ -154,6 +159,7 @@ park6.photo.attach(io: file, filename: "Parc des Bastions.jpg", content_type: "i
 park7 = Park.new(
   name: "Parc de la Grange",
   address: "Quai Gustave-Ador, 1207 Genève",
+  city: "Genève",
   description: "Le parc La Grange est le plus grand parc de la ville et l’un des plus beaux. Ses arbres majestueux, ses points de vue spectaculaires et ses ambiances variées en font un lieu de promenade privilégié. Il est situé entre le quartier des Eaux-Vives et le parc des Eaux-Vives avec lequel il forme une continuité spatiale et végétale.",
   category: "Grand",
   sandbox: true,
@@ -172,6 +178,7 @@ park7.photo.attach(io: file, filename: "Parc de la Grange.jpg", content_type: "i
 park8 = Park.new(
   name: "Parc des Eaux-Vives",
   address: "Quai Gustave-Ador 82, 1207 Genève, Suisse",
+  city: "Genève",
   description: "Situé dans la continuité du parc La Grange, le parc des Eaux-Vives bénéficie d’une situation extraordinaire, dominant le lac et le Jura. C’est un lieu impressionnant où beauté et nature se courtisent depuis presque 5 siècles.",
   category: "Grand",
   sandbox: true,
@@ -190,6 +197,7 @@ park8.photo.attach(io: file, filename: "Parc des Eaux-Vives.jpg", content_type: 
 park9 = Park.new(
   name: "Parc de la Perle du Lac",
   address: "Rue de Lausanne 120B, 1202 Genève, Suisse",
+  city: "Genève",
   description: "Le parc de la Perle du Lac est un parc public situé dans le quartier des Eaux-Vives à Genève, en Suisse. Il est situé à l'emplacement de l'ancien domaine de la famille Lullin, dont il conserve quelques vestiges, notamment la villa de La Grange, ainsi que les jardins.",
   category: "Grand",
   sandbox: true,
@@ -208,6 +216,7 @@ park9.photo.attach(io: file, filename: "Parc de la Perle du Lac.jpg", content_ty
 park10 = Park.new(
   name: "Parc des Franchises",
   address: "Av. de Châtelaine, 1203 Genève, Suisse",
+  city: "Genève",
   description: "Situé entre le quartier des Charmilles et celui de Vieusseux, ce grand et beau parc, riche d’arbres magnifiques, abrite l'un des plus grands biotopes humides du canton de Genève et offre une large palette d’activités récréatives et sportives. Il est très apprécié de la population environnante.",
   category: "Grand",
   sandbox: true,
@@ -226,6 +235,7 @@ park10.photo.attach(io: file, filename: "Parc des Franchises.jpg", content_type:
 park11 = Park.new(
   name: "Parc des Cropettes",
   address: "Rue Elisabeth-Baulacre, 1202 Genève, Suisse",
+  city: "Genève",
   description: "Situé derrière la gare Cornavin, le parc des Cropettes permet de s’échapper dans la verdure au sortir de la gare. Poumon du quartier des Grottes, il est très fréquenté par la population et accueille de nombreuses manifestations.",
   category: "Grand",
   sandbox: true,
@@ -246,6 +256,7 @@ park11.photo.attach(io: file, filename: "Parc des Cropettes.jpg", content_type: 
 park12 = Park.new(
   name: "Parc Vernex",
   address: "Avenue du Vernex 2, 1815 Clarens, Suisse",
+  city: "Clarens",
   description: "Situé au bord du lac Léman et à côté de l'Auditorium Stravinsky, le parc Vernex offre aux promeneurs un espace de verdure dans la continuité des quais fleuris de Montreux Riviera. Chaque année au mois de juillet, il se transforme pour accueillir l'une des scènes du Montreux Jazz Festival. Parmi ses grands arbres centenaires et son magnolia majestueux, le Parc Vernex héberge diverses œuvres d'art, dont la fontaine à la mémoire de Vibeke de Jean Flemming Soerensen et la scuplture Montrailes d'Antoine Poncet. A son extrémité, les bustes de Richard Strauss et de Miles Davis, sculptés par Bernard Bavaud, se font face et rappellent aux visiteurs le riche passé de Montreux Riviera. De l'autre côté, la place de jeux et la pelouse en pente légère font du Parc Vernex un espace privilégié pour les familles et les promeneurs en quête de repos.",
   category: "Moyen",
   sandbox: true,
@@ -265,6 +276,7 @@ park12.photo.attach(io: file, filename: "Parc Vernex.jpg", content_type: "image/
 park13 = Park.new(
   name: "Parc de la Rouvenaz",
   address: "Avenue du Casino 32, 1820 Montreux, Suisse",
+  city: "Montreux",
   description: "Le parc de la Rouvenaz est un parc public de 1,5 hectare situé à Montreux, en Suisse. Il est situé à proximité du lac Léman et du centre-ville de Montreux. Il est traversé par la rivière de la Baye de Montreux, qui lui a donné son nom.",
   category: "Petit",
   sandbox: true,
@@ -283,6 +295,7 @@ park13.photo.attach(io: file, filename: "Parc de la Rouvenaz.jpg", content_type:
 park14 = Park.new(
   name: "Le Parc Donner",
   address: "Avenue de Chillon 47, 1820 Montreux, Suisse",
+  city: "Montreux",
   description: "Le Parc Donner, à l’est de Montreux, sert depuis 1947 de place de jeux pour les enfants. Il a été réaménagé de façon à abriter un parking semi-enterré tout en conservant en surface sa vocation d’espace dédié aux enfants.",
   category: "Grand",
   sandbox: true,
@@ -303,6 +316,7 @@ park14.photo.attach(io: file, filename: "Parc Donner.jpg", content_type: "image/
 park15 = Park.new(
   name: "Parc de Mangettes",
   address: "Chemin de Mangette, 1260 Nyon, Suisse",
+  city: "Nyon",
   description: "Véritable poumon vert, ce parc offre une vaste étendue pour se détendre, pique-niquer et s'amuser au milieu d'arbres remarquables fonctionnant comme un îlot de fraîcheur. Les vestiges de l'aqueduc romain sont visibles sur quelques mètres. Une plate-bande de plantes vivaces agrémente le parc de ses fleurs colorées, parmi lesquelles des anémones du Japon qui fleurissent jusqu'aux premières gelées.",
   category: "Grand",
   sandbox: true,
@@ -321,6 +335,7 @@ park15.photo.attach(io: file, filename: "Parc de Mangettes.jpg", content_type: "
 park16 = Park.new(
   name: "Parc du Boiron",
   address: "Route de Genève 9, 1260 Nyon, Suisse",
+  city: "Nyon",
   description: "Partez à la découverte d'un des lieux les plus riches en biodiversité de Nyon. Détendez-vous au bord de la rivière du Boiron et flânez dans un cadre naturel et calme. En saison, cet espace devient un haut lieu des grillades du week-end.",
   category: "Grand",
   sandbox: false,
@@ -339,6 +354,7 @@ park16.photo.attach(io: file, filename: "Parc du Boiron.jpg", content_type: "ima
 park17 = Park.new(
   name: "Parc de Bois-Fleuri",
   address: "Pl. de Savoie 2, 1260 Nyon, Suisse",
+  city: "Nyon",
   description: "Dans ce cadre idyllique, profitez de l'étendue verte offrant une vue imprenable sur le lac tout en laissant les enfants partir à l'aventure en jouant aux navigateurs. Vous apercevrez des arbres ancestraux ainsi qu'un sous-bois composé de rhododendrons et de taxus.",
   category: "Moyen",
   sandbox: true,
@@ -357,6 +373,7 @@ park17.photo.attach(io: file, filename: "Parc de Bois-Fleuri.jpg", content_type:
 park18 = Park.new(
   name: "Parc de la Morâche",
   address: "Rue du Ronzier 9, 1260 Nyon, Suisse",
+  city: "Nyon",
   description: "D'une surface de 12'000 m2, le parc de la Morâche a été inauguré en 2018. Lieu polyvalent destiné à la détente, aux rencontres et aux loisirs, ce modèle de biodiversité urbaine est un trait d'union entre les quartiers nord et sud de la ville. Les promeneurs découvriront sur place, l'oeuvre d'art Les Ailes du Cossy d'Emilie Ding.",
   category: "Grand",
   sandbox: true,
@@ -377,6 +394,7 @@ park18.photo.attach(io: file, filename: "Parc de la Morâche.jpg", content_type:
 park19 = Park.new(
   name: "Parc de Signal-de-Bougy",
   address: " Rte du Signal, 1172 Bougy-Villars, Suisse",
+  city: "Bougy-Villars",
   description: "Le parc de Signal-de-Bougy est un parc public de 50 hectares situé à Bougy-Villars, en Suisse. Il est situé sur le flanc sud du Jura, à une altitude de 700 mètres, surplombant le lac Léman et les Alpes. Il est situé à proximité de la sortie de l'autoroute A1 de Rolle.",
   category: "Grand",
   sandbox: true,
@@ -397,6 +415,7 @@ park19.photo.attach(io: file, filename: "Parc de Signal-de-Bougy.jpg", content_t
 park20 = Park.new(
   name: "Place de jeux du Chêne",
   address: "Avenue du Chêne, 1170 Aubonne, Suisse",
+  city: "Aubonne",
   description: "Petite aire de jeux en plein coeur du village, très agréable.",
   category: "Petit",
   sandbox: true,
@@ -417,6 +436,7 @@ park20.photo.attach(io: file, filename: "Place de jeux du Chêne.jpg", content_t
 park21 = Park.new(
   name: "Parc de l'Indépendance",
   address: "Avenue de l'Indépendance 1, 1110 Morges, Suisse",
+  city: "Morges",
   description: "Le Parc de l'indépendance se situe au bord du lac Léman, entre le château de Morges et la Morges. De nombreuses manifestations y sont organisées tout au long de l'année. Il est également possible de louer des barques et des pédalos pour profiter du lac.",
   category: "Grand",
   sandbox: true,
@@ -435,6 +455,7 @@ park21.photo.attach(io: file, filename: "Parc de l'Indépendance.jpg", content_t
 park22 = Park.new(
   name: "Parc de Vertou",
   address: "1110 Morges, Suisse",
+  city: "Morges",
   description: "Au sud-est de la Ville, le Parc de Vertou mélange des infrastructures sportives dans un lieu paisible au bord du lac.",
   category: "Grand",
   sandbox: true,
@@ -455,6 +476,7 @@ park22.photo.attach(io: file, filename: "Parc de Vertou.jpg", content_type: "ima
 park23 = Park.new(
   name: "Parc de Belleville",
   address: "47 Rue des Couronnes, 75020 Paris, France",
+  city: "Paris",
   description: "À l'abordage ! Direction le parc de Belleville dans le 20e arrondissement pour partir à la découverte de la nouvelle aire de jeux inaugurée en novembre 2019. Occupée un temps par « le paquebot », impressionnante construction faite de bois et de béton, place à présent à une structure plus sécurisée, mais qui conserve néanmoins un petit côté téméraire avec sa pente inclinée à 30 degrés qui ravira les petits casse-cou à partir de 6 ans.",
   category: "Grand",
   sandbox: true,
@@ -473,6 +495,7 @@ park23.photo.attach(io: file, filename: "Parc de Belleville.jpg", content_type: 
 park24 = Park.new(
   name: "Parc Chapelle-Charbon",
   address: "75018 Paris, France",
+  city: "Paris",
   description: "Entre la porte de la Chapelle et la porte d’Aubervilliers, le parc Chapelle-Charbon s’inscrit dans le Grand Projet de Renouvellement Urbain de Paris Nord Est. Ce morceau de campagne à Paris se veut naturel et sobre en mettant l'accent sur une biodiversité, avec une flore majoritairement francilienne et la création de milieux diversifiés et équilibrés. Le parc est aussi un formidable terrain de jeux pour les enfants de 1 à 12 ans. À eux, mur d’escalade (350 m² et 680 m²), parcours d’aventure (240 m²), espace de jeux avec baby-foot, ping-pong, terrain de pétanque. Un espace de buvette, une terrasse de rencontre et une scène complètent l'ensemble.",
   category: "Grand",
   sandbox: true,
@@ -491,6 +514,7 @@ park24.photo.attach(io: file, filename: "Parc Chapelle-Charbon.jpg", content_typ
 park25 = Park.new(
   name: "Parc de Clichy-Batignolles",
   address: "147 Rue Cardinet, 75017 Paris, France",
+  city: "Paris",
   description: "Le parc s'est agrandi en avril 2014 pour atteindre sa taille définitive de 10 ha fin 2020. Écolo, il s'intègre dans ce tout nouveau quartier des Batignolles. Deux zones d'aires de jeux pour les enfants et les adolescents avec des terrains pour les jeux de ballon, un skate park, un espace pour le basket-ball… mais aussi bancs et transats en font un lieu vivant où une population intergénérationnelle peut se croiser et se retrouver. Les plus âgés peuvent admirer l'énergie des plus jeunes tentant de réaliser sur leur skate des figures toujours plus acrobatiques !",
   category: "Grand",
   sandbox: true,
@@ -509,6 +533,7 @@ park25.photo.attach(io: file, filename: "Parc de Clichy-Batignolles.jpg", conten
 park26 = Park.new(
   name: "Parc André Citroën",
   address: "2 Rue Cauchy, 75015 Paris, France",
+  city: "Paris",
   description: "Le parc André-Citroën est situé à l’emplacement de l’ancienne usine parisienne de Citroën. Inauguré en 1992, d’une superficie de 14 hectares, il est l’un des parcs les plus récents de la capitale. Cet écrin de verdure offre une promenade verdoyante et variée. Outre des tables de ping-pong ou d’échecs en accès-libre, des jeux d’eau et une gigantesque serre tropicale, Là-Haut est un parcours ludique et aérien mêlant, jeux d’agilité, activité sportive, défi et moments de détente qui ravira les enfants.",
   category: "Grand",
   sandbox: true,
@@ -527,6 +552,7 @@ park26.photo.attach(io: file, filename: "Parc André Citroën.jpg", content_type
 park27 = Park.new(
   name: "Parc Floral de Paris",
   address: "Route de la Pyramide, 75012 Paris, France",
+  city: "Paris",
   description: "Situé dans le bois de Vincennes, le Parc floral de Paris n’accueille pas seulement une merveilleuse collection de 3 000 variétés de plantes différentes. Il abrite également une belle aire de jeux pour les plus jeunes : toboggans, balançoires, tourniquet, tunnels et d'autres cachettes qui raviront les petits.… sans oublier la tour Amazone et sa grande glissade à 6 mètres de hauteur et aussi une structure à grimper impressionnante de dix mètres de haut… Mais ce qui émerveillera les plus jeunes reste sans conteste cette aire de jeux, véritable serre aux papillons plantée au sommet d’une butte à dévaler bras écartés pour avoir l’impression de voler.",
   category: "Grand",
   sandbox: true,
@@ -545,6 +571,7 @@ park27.photo.attach(io: file, filename: "Parc Floral de Paris.jpg", content_type
 park28 = Park.new(
   name: "Le Jardin de Nelson Mandela",
   address: "32, rue Berger 75001 PARIS",
+  city: "Paris",
   description: "Face à la Canopée des Halles, le jardin Nelson-Mandela vous entraîne dans un monde ludique et coloré. L'équipe du sculpteur Henri Marquet a imaginé un univers à mi-chemin entre le Magicien d'Oz et Mario Bros, avec des jeux innovants. Ici, liberté de jouer ! Spécialement conçu pour le plaisir et l’épanouissement des enfants de 7 à 11 ans, il favorise le développement de leur imaginaire et de leurs facultés physiques ainsi que leur socialisation. Sur 2 500 m², il conjugue équipements récréatifs inédits et sculptures monumentales propices à la rêverie et à la fabrication d’histoires, espaces pour jeux spontanés, lieux de repos…",
   category: "Moyen",
   sandbox: true,
@@ -565,6 +592,7 @@ park28.photo.attach(io: file, filename: "Le Jardin de Nelson Mandela.jpg", conte
 park29 = Park.new(
   name: "Parc de la Tête d'Or",
   address: "69006 Lyon, France",
+  city: "Lyon",
   description: "Le parc de la Tête d’Or est l’un des plus grands parcs urbains de France. Situé sur les bords du Rhône, il offre 105 hectares de vastes pelouses, arbres centenaires, massifs fleuris, parterres de roses ou de pivoines, apportant en toutes saisons des touches colorées et parfumées.",
   category: "Grand",
   sandbox: true,
@@ -583,6 +611,7 @@ park29.photo.attach(io: file, filename: "Parc de la Tête d'Or.jpg", content_typ
 park30 = Park.new(
   name: "Parc Blandan",
   address: "Place Blandan, 69007 Lyon, France",
+  city: "Lyon",
   description: "Une aire de jeux nouvelle génération
   Les enfants de 3 à 12 ans peuvent partir à l'assaut de la Vague des remparts, un aménagement qui offre une aire de jeux exceptionnelle de 1000 m2.
   Cette construction en bois, spécifiquement pensée pour le parc Blandan fait appel à l'imaginaire de la fortification, permettant de grimper, attaquer, glisser, se cacher dans des niches selon l'imagination des enfants qui seront ravis de partir à l'abordage de ce vaisseau de bois truffé d'installations ludiques.
@@ -608,6 +637,7 @@ park30 = Park.new(
 park31 = Park.new(
   name: "Parc des Jardins de l'Europe",
   address: "Avenue de France, 74000 Annecy, France",
+  city: "Annecy",
   description: "À l’origine deux îles marécageuses, l’aménagement d’un jardin public présentant une collection d'arbres ornementaux participe à la valorisation des beautés naturelles des rives du lac.",
   category: "Grand",
   sandbox: true,
@@ -626,6 +656,7 @@ park31 = Park.new(
 park32 = Park.new(
   name: "Parc Le Pâquier",
   address: "74000 Annecy, France",
+  city: "Annecy",
   description: "Ce grand espace de verdure (6,2 ha) qui ouvre sur la perspective du lac et des montagnes suscite l’admiration des visiteurs.",
   category: "Grand",
   sandbox: true,
@@ -644,12 +675,11 @@ park32 = Park.new(
 park36 = Park.new(
   name: "Square de l'Evêché",
   address: "74000 Annecy, France",
+  city: "Annecy",
   description: "La forteresse des temps modernes, conception Ville d'Annecy & Pro Urba
   Avec une structure tout bois sur la thématique du château accessible aux personnes à mobilité réduite (PMR), l’aire de jeux rappelle la forteresse qui domine la ville.
-
   Le choix des jeux s’est porté sur des matériaux nobles comme le bois lamellé collé Robinier (faux acacia) et l’inox, afin d’apporter un style contemporain approprié à l’air du temps.
   Le sol a été réalisé avec des dalles amortissantes recouvertes d’un gazon synthétique Terragreen afin de se fondre avec les espaces verts.
-
   Cet espace offre une capacité d’accueil de 60 enfants, répondant ainsi à une fréquentation importante et constante.",
   category: "Moyen",
   sandbox: true,
@@ -670,8 +700,8 @@ park36 = Park.new(
 park33 = Park.new(
   name: "Parc du Thabor",
   address: "Place Saint-Mélaine, 35000 Rennes, France",
+  city: "Rennes",
   description: "Le jardin du Thabor invite autant à être studieux que paresseux… Les étudiants des facs toutes proches viennent réviser, lire ou rêvasser, les familles se baladent en allant aux jeux d’enfants, les promeneurs admirent la roseraie et ses 2000 variétés. Au détour des chemins on découvre une grotte étrange, des cascades et des arbres, remarquables en toutes saisons.
-
   Dans ce lieu emblématique de la capitale bretonne, on peut également boire un verre en terrasse, faire un tour de manège ou pratiquer le running sur une boucle de 1,5Km très vallonnée qui fait le tour du Parc. Bref, le Thabor, c’est le Paradis. En pleine ville.",
   category: "Grand",
   sandbox: true,
@@ -690,6 +720,7 @@ park33 = Park.new(
   park34 = Park.new(
     name: "Parc des Tanneurs",
     address: "35000 Rennes, France",
+    city: "Rennes",
     description: "C’est un petit coin de verdure à l’abri des regards : le Parc des Tanneurs forme un vallon arboré qui s’écoule jusqu’à la rivière l’Ille et les prairies Saint-Martin. On y pénètre par la Rue Saint-Martin, en passant par une grande grille qui donne sur une belle villa du XIXème. Une propriété prestigieuse, autrefois habitée par des familles de tanneurs, d’où son nom. Il faut oser entrer dans ce parc d’un peu plus d’un hectare pour apprécier son charme romantique et admirer de beaux spécimens de séquoias. 90 arbres sont plantés dans le vallon et participent de l’atmosphère reposante du lieu. Une balade inattendue et verdoyante, à seulement 5 minutes à pied de la Place Sainte-Anne, à prolonger en revenant par le Canal Saint-Martin et les prairies du même nom.",
     category: "Moyen",
     sandbox: true,
@@ -708,6 +739,7 @@ park33 = Park.new(
     park35 = Park.new(
       name: "Parc Oberthür",
       address: "35000 Rennes, France",
+      city: "Rennes",
       description: "Le Parc Oberthür a été aménagé par le même paysagiste que celui du Thabor, Denis Bühler, quelques années avant, en 1863. Le parc forme un magnifique écrin autour de l’hôtel particulier du célèbre imprimeur rennais, François-Charles Oberthür. Pour ce notable passionné d’entomologie et de botanique, Bühler conserva les grands arbres, en particulier de magnifiques chênes, merisiers, hêtres et peupliers. Des arbres de grande taille déploient leur ombre sur ce très joli parc où il fait bon se promener : cèdres, des hêtres laciniés, des chênes pédonculés, des tilleuls argentés, des Gingko Biloba…",
       category: "Grand",
       sandbox: true,
