@@ -15,7 +15,7 @@ class ParksController < ApplicationController
         lat: park.latitude,
         lng: park.longitude,
         info_window_html: render_to_string(partial: "info_window", locals: { park: park }),
-        marker_html: render_to_string(partial: "marker") #pour afficher le logo comme marker
+        #marker_html: render_to_string(partial: "marker") #pour afficher le logo comme marker
       }
     end
   end
