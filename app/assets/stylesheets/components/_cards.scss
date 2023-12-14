@@ -31,7 +31,7 @@
     margin-bottom: 0;
     margin-top: 8px;
     opacity: .7;
-    color: #EF476F;
+    color: $corail;
   }
 
   .card-park-infos {
@@ -61,6 +61,13 @@
   margin-top: 8px;
 }
 
+.show-subtitle {
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: bold;
+  font-style: italic;
+  color: $corail;
+}
 
 // map + photo
 .map-flex {
