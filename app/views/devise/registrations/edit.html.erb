@@ -42,14 +42,17 @@
                   input_html: { autocomplete: "current-password", class: "custom-text-field" } %>
       <%= f.input :first_name,
                   :label => 'Prénom',
+                  hint: "Ton prénom ne sera pas visible par les autres utilisateurs",
                   required: false,
                   input_html: { class: "custom-text-field" } %>
       <%= f.input :last_name,
                   :label => 'Nom',
+                  hint: "Ton nom ne sera pas visible par les autres utilisateurs",
                   required: false,
                   input_html: { class: "custom-text-field" } %>
       <%= f.input :nickname,
                   :label => 'Pseudo',
+                  hint: "Ton pseudo sera visible par les autres utilisateurs",
                   required: false,
                   input_html: { class: "custom-text-field" } %>
       <%= f.input :address,
@@ -64,6 +67,7 @@
     </div>
 
   <div class="avatar-options">
+    <p>Choisis ton avatar ici</p>
     <% User::AVATAR_CHOICES.each do |avatar| %>
       <label class="avatar-option">
         <%= f.radio_button :avatar, avatar %>
