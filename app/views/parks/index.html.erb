@@ -10,7 +10,7 @@
       <%= text_field_tag :query,
             params[:query],
             class: "input",
-            placeholder: "Chercher un parc"
+            placeholder: "Chercher un parc par nom, par ville..."
         %>
         <button class="loupe-index" type="submit">
           <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #7f7f7f;"></i>
@@ -31,7 +31,7 @@
           <%= cl_image_tag park.photo.key %>
           <div class="card-park-infos">
             <h5 class="card-title"><%= park.name %></h5>
-            <h6 class="card-subtitle"> <%= park.city %></h6>
+            <p class="card-subtitle"> <%= park.city %></p>
             <p> <%= truncate(park.description, length:100) %></p>
             </div>
         </div>

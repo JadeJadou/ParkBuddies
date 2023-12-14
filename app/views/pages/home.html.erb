@@ -5,7 +5,7 @@
         <br>
         <div class="text-shadow text-center">
           <p>L'appli qui transforme les parcs  en terrains d'amitié</p>
-          <p><strong>Connectez, Rencontrez, Partagez</strong></p>
+          <p style="font-size:20px"><strong>Connectez, Rencontrez, Partagez</strong></p>
         </div>
         <br>
         <div class="col-md-4 text-center">
@@ -19,21 +19,19 @@
       </div>
     </div>
 <br>
-<br>
   <div class="container">
-  </div>
     <div class="container mt-3 text-center">
       <%= form_with url: "/", method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "input",
-              style: "margin-left:26px; margin-right:29px;",
-              placeholder: "Chercher un parc"
+              placeholder: "Chercher un parc par nom, par ville..."
           %>
-          <button class="loupe" style="margin-left:298px" type="submit">
+          <button class="loupe" type="submit">
             <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #7f7f7f;"></i>
           </button>
       <% end %>
+  </div>
   <div style="margin-top:2px" class="map-show"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
