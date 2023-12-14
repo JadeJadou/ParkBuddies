@@ -11,7 +11,8 @@ class PagesController < ApplicationController
       {
         lat: park.latitude,
         lng: park.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { park: park })
+        info_window_html: render_to_string(partial: "info_window", locals: { park: park }),
+        marker_html: render_to_string(partial: "marker")
       }
     end
   end
