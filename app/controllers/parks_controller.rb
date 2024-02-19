@@ -1,4 +1,7 @@
 class ParksController < ApplicationController
+  require 'net/http'
+  require 'uri'
+
   def index
     @parks = Park.all.order(:id)
 
@@ -29,6 +32,24 @@ class ParksController < ApplicationController
                 info_window_html: render_to_string(partial: "info_window", locals: { park: @park })
               }]
   end
+
+  def fetch
+    ne_lat, ne_lon, sw_lat, sw_lon = params.values_at(:ne_lat, :ne_lon, :sw_lat, :sw_lon)
+    overpass_url = "http://overpass-api.de/api/interpreter"
+    query = "[out:json];(node['leisure'='park'](#{sw_lat},#{sw_lon},#{ne_lat},#{ne_lon});way['leisure'='park'](#{sw_lat},#{sw_lon},#{ne_lat},#{ne_lon});rel['leisure'='park'](#{sw_lat},#{sw_lon},#{ne_lat},#{ne_lon}););out body;>;out skel qt;"
+
+    uri = URI.parse(overpass_url)
+    http_response = Net::HTTP.post_form(uri, 'data' => query)
+
+    if http_response.is_a?(Net::HTTPSuccess)
+      render json: http_response.body.force_encoding('UTF-8')
+    else
+      render json: { error: 'API Overpass response was not successful' }, status: :bad_request
+    end
+  rescue => e
+    render json: { error: e.message }, status: :bad_request
+  end
+
 
   private
 

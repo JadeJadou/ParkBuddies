@@ -23,6 +23,9 @@ Rails.application.routes.draw do
     end
   end
   resources :parks, only: [:index, :show] do
+    collection do
+      get 'fetch' # Ajoute la route /parks/fetch pour l'action fetch
+    end
     resources :favorites, only: [:create]
   end
   resources :chatrooms, only: [:index, :show] do
