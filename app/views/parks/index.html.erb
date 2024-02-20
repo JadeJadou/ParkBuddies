@@ -28,7 +28,11 @@
     <% @parks.each do | park | %>
       <%= link_to park_path(park), class:"text-decoration-none", style:"color: inherit" do %>
         <div class="card-park">
-          <%= cl_image_tag park.photo.key %>
+          <% if park.photo.attached? %>
+            <%= cl_image_tag park.photo.key %>
+          <% else %>
+            <%= image_tag("https://res.cloudinary.com/dd6jjbnqk/image/upload/v1708356715/BP_Logos/Oups_Ce_parc_n_a_pas_encore_de_photo_mvj1ef.svg")%>
+          <% end %>
           <div class="card-park-infos">
             <h5 class="card-title"><%= park.name %></h5>
             <p class="card-subtitle"> <%= park.city %></p>

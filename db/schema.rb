@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_14_065606) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_19_162648) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -88,6 +88,38 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_14_065606) do
     t.float "latitude"
     t.float "longitude"
     t.string "city"
+    t.string "osm_id"
+    t.boolean "dogs"
+    t.boolean "barbecue"
+    t.boolean "shade"
+    t.boolean "benches"
+    t.boolean "tables"
+    t.boolean "trash"
+    t.boolean "toilets"
+    t.boolean "picnic"
+    t.boolean "parking"
+    t.boolean "bike"
+    t.boolean "skateboard"
+    t.boolean "basketball"
+    t.boolean "football"
+    t.boolean "tennis"
+    t.boolean "volleyball"
+    t.boolean "badminton"
+    t.boolean "pingpong"
+    t.boolean "golf"
+    t.boolean "running"
+    t.boolean "cycling"
+    t.boolean "roller"
+    t.boolean "hiking"
+    t.boolean "fishing"
+    t.boolean "horse_riding"
+    t.boolean "bird_watching"
+    t.boolean "swimming"
+    t.boolean "forest"
+    t.boolean "lake"
+    t.boolean "river"
+    t.boolean "sea"
+    t.boolean "mountain"
   end
 
   create_table "private_chatrooms", force: :cascade do |t|

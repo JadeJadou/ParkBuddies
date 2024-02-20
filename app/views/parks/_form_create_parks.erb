@@ -1,0 +1,214 @@
+<!-- Exemple pour un nouveau parc -->
+<%= form_with model: @park, local: true do |form| %>
+  <%= form.label :name, "Nom du parc" %>
+  <%= form.text_field :name %>
+
+  <%= form.label :description, "Description" %>
+  <%= form.text_area :description %>
+
+  <%= form.label :city, "Ville" %>
+  <%= form.text_field :city %>
+
+  <%= form.label :address, "Adresse" %>
+  <%= form.text_field :address %>
+
+  <%= form.label :photo, "Photo" %>
+  <%= form.file_field :photo %>
+
+  <div>
+    <%= form.check_box :sandbox %>
+    <%= form.label :sandbox, "Bac à sable" %>
+  </div>
+
+  <div>
+    <%= form.check_box :slide %>
+    <%= form.label :slide, "Toboggan" %>
+  </div>
+
+  <div>
+    <%= form.check_box :sling %>
+    <%= form.label :sling, "Balançoire" %>
+  </div>
+
+  <div>
+    <%= form.check_box :water %>
+    <%= form.label :water, "Point d'eau" %>
+  </div>
+
+  <div>
+    <%= form.check_box :climber %>
+    <%= form.label :climber, "Structure d'escalade" %>
+  </div>
+
+  <div>
+    <%= form.check_box :coffee %>
+    <%= form.label :coffee, "Café" %>
+  </div>
+
+  <div>
+    <%= form.check_box :zoo %>
+    <%= form.label :zoo, "Zoo/Animaux" %>
+  </div>
+
+  <div>
+    <%= form.check_box :toys_rent %>
+    <%= form.label :toys_rent, "Location de jouets/jeux" %>
+  </div>
+
+  <div>
+    <%= form.check_box :dogs %>
+    <%= form.label :dogs, "Chien admis" %>
+  </div>
+
+  <div>
+    <%= form.check_box :barbecue %>
+    <%= form.label :barbecue, "Barbecue" %>
+  </div>
+
+  <div>
+    <%= form.check_box :shade %>
+    <%= form.label :shade, "Ombre" %>
+  </div>
+
+  <div>
+    <%= form.check_box :benches %>
+    <%= form.label :benches, "Bancs" %>
+  </div>
+
+  <div>
+    <%= form.check_box :tables %>
+    <%= form.label :tables, "Tables" %>
+  </div>
+
+  <div>
+    <%= form.check_box :trash %>
+    <%= form.label :trash, "Poubelles" %>
+  </div>
+
+  <div>
+    <%= form.check_box :toilets %>
+    <%= form.label :toilets, "Toilettes" %>
+  </div>
+
+  <div>
+    <%= form.check_box :picnic %>
+    <%= form.label :picnic, "Aires de pique-nique" %>
+  </div>
+
+  <div>
+    <%= form.check_box :parking %>
+    <%= form.label :parking, "Parking" %>
+  </div>
+
+  <div>
+    <%= form.check_box :bike %>
+    <%= form.label :bike, "Station vélo" %>
+  </div>
+
+  <div>
+    <%= form.check_box :skateboard %>
+    <%= form.label :skateboard, "Skate park" %>
+  </div>
+
+  <div>
+    <%= form.check_box :basketball %>
+    <%= form.label :basketball, "Terrain de basket" %>
+  </div>
+
+  <div>
+    <%= form.check_box :football %>
+    <%= form.label :football, "Terrain de football" %>
+  </div>
+
+  <div>
+    <%= form.check_box :tennis %>
+    <%= form.label :tennis, "Terrain de tennis" %>
+  </div>
+
+  <div>
+    <%= form.check_box :volleyball %>
+    <%= form.label :volleyball, "Terrain de volley" %>
+  </div>
+
+  <div>
+    <%= form.check_box :badminton %>
+    <%= form.label :badminton, "Terrain de badminton" %>
+  </div>
+
+  <div>
+    <%= form.check_box :pingpong %>
+    <%= form.label :pingpong, "Table de ping-pong" %>
+  </div>
+
+  <div>
+    <%= form.check_box :golf %>
+    <%= form.label :golf, "Mini-golf" %>
+  </div>
+
+  <div>
+    <%= form.check_box :running %>
+    <%= form.label :running, "Parcours de course" %>
+  </div>
+
+  <div>
+    <%= form.check_box :cycling %>
+    <%= form.label :cycling, "Parcours de vélo" %>
+  </div>
+
+  <div>
+    <%= form.check_box :roller %>
+    <%= form.label :roller, "Parcours de roller" %>
+  </div>
+
+  <div>
+    <%= form.check_box :hiking %>
+    <%= form.label :hiking, "Parcours de randonnée" %>
+  </div>
+
+  <div>
+    <%= form.check_box :fishing %>
+    <%= form.label :fishing, "Pêche" %>
+  </div>
+
+  <div>
+    <%= form.check_box :horse_riding %>
+    <%= form.label :horse_riding, "Balade à cheval" %>
+  </div>
+
+  <div>
+    <%= form.check_box :bird_watching %>
+    <%= form.label :bird_watching, "Observation d'oiseaux" %>
+  </div>
+
+  <div>
+    <%= form.check_box :swimming %>
+    <%= form.label :swimming, "Piscine" %>
+  </div>
+
+  <div>
+    <%= form.check_box :forest %>
+    <%= form.label :forest, "Forêt" %>
+  </div>
+
+  <div>
+    <%= form.check_box :lake %>
+    <%= form.label :lake, "Lac" %>
+  </div>
+
+  <div>
+    <%= form.check_box :river %>
+    <%= form.label :river, "Rivière" %>
+  </div>
+
+  <div>
+    <%= form.check_box :sea %>
+    <%= form.label :sea, "Mer" %>
+  </div>
+
+  <div>
+    <%= form.check_box :mountain %>
+    <%= form.label :mountain, "Montagne" %>
+  </div>
+
+  <%= form.submit "Soumettre" %>
+<% end %>

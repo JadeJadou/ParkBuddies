@@ -1,6 +1,34 @@
 class ParksController < ApplicationController
   require 'net/http'
   require 'uri'
+  require 'json'
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+
+  def new
+    @park = Park.new
+  end
+
+  def create
+    @park = Park.new(park_params)
+    if @park.save
+      redirect_to @park, notice: 'Merci! Le parc a été créé avec succès.'
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @park = Park.find(params[:id])
+  end
+
+  def update
+    @park = Park.find(params[:id])
+    if @park.update(park_params)
+      redirect_to @park, notice: 'Merci! Les informations du parc ont été mises à jour!'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   def index
     @parks = Park.all.order(:id)
@@ -54,8 +82,9 @@ class ParksController < ApplicationController
   private
 
   def park_params
-    params.require(:park).permit(:name, :description, :category, :sandbox, :slide, :sling, :photo)
+    params.require(:park).permit(:name, :description, :category, :sandbox, :slide, :sling, :water, :climber, :coffee, :zoo, :toys_rent, :dogs, :barbecue, :shade, :benches, :tables, :trash, :toilets, :picnic, :parking, :bike, :skateboard, :basketball, :football, :tennis, :volleyball, :badminton, :pingpong, :golf, :running, :cycling, :roller, :hiking, :fishing, :horse_riding, :bird_watching, :swimming, :forest, :lake, :river, :sea, :mountain, :photo)
   end
+
 end
 
     # t.boolean "water"
