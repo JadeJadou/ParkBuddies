@@ -1,20 +1,30 @@
 <!-- Exemple pour un nouveau parc -->
+<div>
 <%= form_with model: @park, local: true do |form| %>
   <%= form.label :name, "Nom du parc" %>
   <%= form.text_field :name %>
-
-  <%= form.label :description, "Description" %>
+</div>
+<br>
+<div>
+  <%= form.label :description, "Description du parc" %>
   <%= form.text_area :description %>
-
-  <%= form.label :city, "Ville" %>
+</div>
+<br>
+<div>
+  <%= form.label :city, "Indiquer la ville" %>
   <%= form.text_field :city %>
-
+</div>
+<br>
+<div>
   <%= form.label :address, "Adresse" %>
   <%= form.text_field :address %>
-
-  <%= form.label :photo, "Photo" %>
+</div>
+<br>
+<div>
+  <%= form.label :photo, "Ajouter une photo" %>
   <%= form.file_field :photo %>
-
+</div>
+<br>
   <div>
     <%= form.check_box :sandbox %>
     <%= form.label :sandbox, "Bac à sable" %>
@@ -210,5 +220,9 @@
     <%= form.label :mountain, "Montagne" %>
   </div>
 
-  <%= form.submit "Soumettre" %>
+
+
+  <div>
+    <%= form.submit "Soumettre" %>
+  </div>
 <% end %>
