@@ -1,58 +1,274 @@
 <div class="flex">
-    <%if @park.sandbox === true  %>
-  <div class="label">
-      <i class="fa-solid fa-campground" style="color: #EF476F;margin-right: 5px;"></i>
-  Bac à sable
-  </div>
-    <% end %>
-    <%if @park.slide === true  %>
+  <% if @park.sandbox %>
     <div class="label">
-
-    <i class="fa-solid fa-shapes" style="color: #EF476F;margin-right: 5px;"></i>
-     Toboggan
-
+      <i class="fa-solid fa-campground" style="color: #EF476F; margin-right: 5px;"></i>
+      Bac à sable
     </div>
-    <% end %>
-    <%if @park.sling === true  %>
-      <div class="label">
-      <i class="fa-solid fa-puzzle-piece" style="color: #EF476F;margin-right: 5px;"></i>
+  <% end %>
+
+  <% if @park.slide %>
+    <div class="label">
+      <i class="fa-solid fa-shapes" style="color: #EF476F; margin-right: 5px;"></i>
+      Toboggan
+    </div>
+  <% end %>
+
+  <% if @park.sling %>
+    <div class="label">
+      <i class="fa-solid fa-puzzle-piece" style="color: #EF476F; margin-right: 5px;"></i>
       Balançoire
     </div>
-    <% end %>
-    <%if @park.water === true  %>
-      <div class="label">
+  <% end %>
 
-      <i class="fa-solid fa-water" style="color: #EF476F;margin-right: 5px;"></i>
-       Eau
-
-    </div>
-    <% end %>
-    <%if @park.climber === true  %>
-      <div class="label">
-      <i class="fa-solid fa-cubes-stacked" style="color: #EF476F;margin-right: 5px;"></i>
-      Grimpe
-    </div>
-    <% end %>
-    <%if @park.coffee === true  %>
-      <div class="label">
-
-     <i class="fa-solid fa-mug-hot" style="color: #EF476F;margin-right: 5px;"></i>
-      Café
-
-    </div>
-    <% end %>
-    <%if @park.zoo === true  %>
-      <div class="label">
-
-      <i class="fa-solid fa-dragon" style="color: #EF476F;margin-right: 5px;"></i>
-      Zoo
-    </div>
-    <% end %>
-
-    <%if @park.toys_rent === true  %>
+  <% if @park.water %>
     <div class="label">
-      <i class="fa-solid fa-face-smile" style="color: #EF476F;margin-right: 5px;"></i>
-      Location
+      <i class="fa-solid fa-water" style="color: #EF476F; margin-right: 5px;"></i>
+      Jeux d'eau
     </div>
-    <% end %>
-  </div>
+  <% end %>
+
+  <% if @park.climber %>
+    <div class="label">
+      <i class="fa-solid fa-cubes-stacked" style="color: #EF476F; margin-right: 5px;"></i>
+      Jeux de grimpe
+    </div>
+  <% end %>
+
+  <% if @park.coffee %>
+    <div class="label">
+      <i class="fa-solid fa-mug-hot" style="color: #EF476F; margin-right: 5px;"></i>
+      Café/Restaurant
+    </div>
+  <% end %>
+
+  <% if @park.zoo %>
+    <div class="label">
+      <i class="fa-solid fa-dragon" style="color: #EF476F; margin-right: 5px;"></i>
+      Zoo/Ménagerie
+    </div>
+  <% end %>
+
+  <% if @park.toys_rent %>
+    <div class="label">
+      <i class="fa-solid fa-face-smile" style="color: #EF476F; margin-right: 5px;"></i>
+      Location de jouets/jeux
+    </div>
+  <% end %>
+
+  <% if @park.dogs %>
+    <div class="label">
+      <i class="fa-solid fa-dog" style="color: #EF476F; margin-right: 5px;"></i>
+      Chien admis
+    </div>
+  <% end %>
+
+  <% if @park.barbecue %>
+    <div class="label">
+      <i class="fa-solid fa-fire" style="color: #EF476F; margin-right: 5px;"></i>
+      Barbecues
+    </div>
+  <% end %>
+
+  <% if @park.shade %>
+    <div class="label">
+      <i class="fa-solid fa-umbrella-beach" style="color: #EF476F; margin-right: 5px;"></i>
+      Ombre
+    </div>
+  <% end %>
+
+  <% if @park.benches %>
+    <div class="label">
+      <i class="fa-solid fa-chair" style="color: #EF476F; margin-right: 5px;"></i>
+      Bancs
+    </div>
+  <% end %>
+
+  <% if @park.tables %>
+    <div class="label">
+      <i class="fa-solid fa-table" style="color: #EF476F; margin-right: 5px;"></i>
+      Tables
+    </div>
+  <% end %>
+
+  <% if @park.trash %>
+    <div class="label">
+      <i class="fa-solid fa-trash" style="color: #EF476F; margin-right: 5px;"></i>
+      Poubelles
+    </div>
+  <% end %>
+
+  <% if @park.toilets %>
+    <div class="label">
+      <i class="fa-solid fa-restroom" style="color: #EF476F; margin-right: 5px;"></i>
+      Toilettes
+    </div>
+  <% end %>
+
+  <% if @park.picnic %>
+    <div class="label">
+      <i class="fa-solid fa-utensils" style="color: #EF476F; margin-right: 5px;"></i>
+      Aires de pique-nique
+    </div>
+  <% end %>
+
+  <% if @park.parking %>
+    <div class="label">
+      <i class="fa-solid fa-square-parking" style="color: #EF476F; margin-right: 5px;"></i>
+      Parking
+    </div>
+  <% end %>
+
+  <% if @park.bike %>
+    <div class="label">
+      <i class="fa-solid fa-person-biking" style="color: #EF476F; margin-right: 5px;"></i>
+      Parcours vélo
+    </div>
+  <% end %>
+
+  <% if @park.skateboard %>
+    <div class="label">
+      <i class="fa-solid fa-skateboard" style="color: #EF476F; margin-right: 5px;"></i>
+      Skatepark
+    </div>
+  <% end %>
+
+  <% if @park.basketball %>
+    <div class="label">
+      <i class="fa-solid fa-basketball-ball" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de basket
+    </div>
+  <% end %>
+
+  <% if @park.football %>
+    <div class="label">
+      <i class="fa-solid fa-futbol" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de football
+    </div>
+  <% end %>
+
+  <% if @park.tennis %>
+    <div class="label">
+      <i class="fa-solid fa-tennis-ball" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de tennis
+    </div>
+  <% end %>
+
+  <% if @park.volleyball %>
+    <div class="label">
+      <i class="fa-solid fa-volleyball-ball" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de volley
+    </div>
+  <% end %>
+
+  <% if @park.badminton %>
+    <div class="label">
+      <i class="fa-solid fa-badminton" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de badminton
+    </div>
+  <% end %>
+
+  <% if @park.football %>
+    <div class="label">
+      <i class="fa-solid fa-futbol" style="color: #EF476F; margin-right: 5px;"></i>
+      Terrain de football
+    </div>
+  <% end %>
+
+  <% if @park.pingpong %>
+    <div class="label">
+      <i class="fa-solid fa-table-tennis" style="color: #EF476F; margin-right: 5px;"></i>
+      Table de ping-pong
+    </div>
+  <% end %>
+
+  <% if @park.golf %>
+    <div class="label">
+      <i class="fa-solid fa-golf-ball" style="color: #EF476F; margin-right: 5px;"></i>
+      Mini-golf
+    </div>
+  <% end %>
+
+  <% if @park.running %>
+    <div class="label">
+      <i class="fa-solid fa-running" style="color: #EF476F; margin-right: 5px;"></i>
+      Parcours de course
+    </div>
+  <% end %>
+
+  <% if @park.roller %>
+    <div class="label">
+      <i class="fa-solid fa-skating" style="color: #EF476F; margin-right: 5px;"></i>
+      Parcours de roller
+    </div>
+  <% end %>
+
+  <% if @park.hiking %>
+    <div class="label">
+      <i class="fa-solid fa-hiking" style="color: #EF476F; margin-right: 5px;"></i>
+      Randonnée
+    </div>
+  <% end %>
+
+  <% if @park.fishing %>
+    <div class="label">
+      <i class="fa-solid fa-fish" style="color: #EF476F; margin-right: 5px;"></i>
+      Pêche
+    </div>
+  <% end %>
+
+  <% if @park.horse_riding %>
+    <div class="label">
+      <i class="fa-solid fa-horse" style="color: #EF476F; margin-right: 5px;"></i>
+      Balade à cheval
+    </div>
+  <% end %>
+
+    <% if @park.bird_watching %>
+    <div class="label">
+      <i class="fa-solid fa-crow" style="color: #EF476F; margin-right: 5px;"></i>
+      Observation d'oiseaux
+    </div>
+  <% end %>
+
+  <% if @park.swimming %>
+    <div class="label">
+      <i class="fa-solid fa-" style="color: #EF476F; margin-right: 5px;"></i>
+      Baignade
+    </div>
+  <% end %>
+
+  <% if @park.forest %>
+    <div class="label">
+      <i class="fa-solid fa-tree" style="color: #EF476F; margin-right: 5px;"></i>
+      Forêt
+    </div>
+  <% end %>
+
+  <% if @park.lake %>
+    <div class="label">
+      <i class="fa-solid fa-water" style="color: #EF476F; margin-right: 5px;"></i>
+      Lac
+    </div>
+  <% end %>
+
+  <% if @park.river %>
+    <div class="label">
+      <i class="fa-solid fa-water" style="color: #EF476F; margin-right: 5px;"></i>
+      Rivière
+    </div>
+  <% end %>
+
+  <% if @park.sea %>
+    <div class="label">
+      <i class="fa-solid fa-water" style="color: #EF476F; margin-right: 5px;"></i>
+      Mer
+    </div>
+  <% end %>
+
+  <% if @park.mountain %>
+    <div class="label">
+      <i class="fa-solid fa-mountain" style="color: #EF476F; margin-right: 5px;"></i>
+      Montagne
+    </div>
+  <% end %>
+</div>
