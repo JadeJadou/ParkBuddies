@@ -22,6 +22,7 @@ gem "rack-cors"
 gem "redis", "~> 4.0"
 gem "sassc-rails"
 gem "simple_form", github: "heartcombo/simple_form"
+gem 'skylight'
 gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
