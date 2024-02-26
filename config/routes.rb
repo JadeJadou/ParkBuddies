@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   end
 
   resources :chatrooms
+
+  get ":test_external_request", to: "tests#external_request"
 end
